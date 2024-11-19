@@ -5,8 +5,8 @@ import (
 	"flag"
 	"github.com/aquasecurity/trivy/pkg/log"
 	"github.com/aquasecurity/trivy/pkg/types"
-	"github.com/y4ney/trivy-plugin-report/internal/excel"
-	"github.com/y4ney/trivy-plugin-report/internal/markdown"
+	"github.com/miao2sec/trivy-plugin-report/internal/excel"
+	"github.com/miao2sec/trivy-plugin-report/internal/markdown"
 	"os"
 	"strings"
 )

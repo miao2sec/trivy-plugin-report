@@ -6,45 +6,52 @@ import (
 	ftypes "github.com/aquasecurity/trivy/pkg/fanal/types"
 	"github.com/aquasecurity/trivy/pkg/log"
 	"github.com/aquasecurity/trivy/pkg/types"
+	"github.com/miao2sec/trivy-plugin-report/internal/utils"
 	"github.com/xuri/excelize/v2"
-	"github.com/y4ney/trivy-plugin-report/internal/utils"
 	"golang.org/x/xerrors"
 )
 
 const (
-	VulnReport = "vulnerability"
+	VulnReport = "漏洞扫描结果"
 )
 
 var (
 	ResultClass = map[types.ResultClass]string{
-		types.ClassOSPkg:   "OS Package",
-		types.ClassLangPkg: "Language Package",
+		types.ClassOSPkg:   "系统层",
+		types.ClassLangPkg: "应用层",
 	}
 	ResultType = map[ftypes.TargetType]string{
 		ftypes.GoBinary: "Go Binary",
 	}
 
 	SeverityColor = map[string]string{
-		"CRITICAL": "FF7675",
-		"HIGH":     "FAB1A0",
-		"MEDIUM":   "FFEAA7",
-		"LOW":      "74B9FF",
-		"UNKNOWN":  "DFE6E9",
+		"超危": "FF7675",
+		"高危": "FAB1A0",
+		"中危": "FFEAA7",
+		"低危": "74B9FF",
+		"未知": "DFE6E9",
+	}
+	ChineseSeverity = map[string]string{
+		"CRITICAL": "超危",
+		"HIGH":     "高危",
+		"MEDIUM":   "中危",
+		"LOW":      "低危",
+		"UNKNOWN":  "未知",
 	}
 
 	VulnStatuses = map[string]string{
-		"not_affected":        "this package is not affected by this vulnerability on this platform",
-		"affected":            "this package is affected by this vulnerability on this platform, but there is no patch released yet",
-		"fixed":               "this vulnerability is fixed on this platform",
-		"under_investigation": "it is currently unknown whether or not this vulnerability affects this package on this platform, and it is under investigation",
-		"will_not_fix":        "this package is affected by this vulnerability on this platform, but there is currently no intention to fix it (this would primarily be for flaws that are of Low or Moderate impact that pose no significant risk to customers)",
-		"fix_deferred":        "this package is affected by this vulnerability on this platform, and may be fixed in the future",
-		"end_of_life":         "this package has been identified to contain the impacted component, but analysis to determine whether it is affected or not by this vulnerability was not performed",
+		"not_affected":        "该软件包在此平台上不受该漏洞的影响",
+		"affected":            "该软件包在此平台上受该漏洞的影响，但是暂未发布补丁",
+		"fixed":               "该软件包已发布修复补丁",
+		"under_investigation": "目前暂未知晓该软件包在此平台上是否受该漏洞的影响，并且正在调查中",
+		"will_not_fix":        "该软件包在此平台上受该漏洞的影响，但是目前没有修复它的打算（这主要是针对影响较低或中等、对客户不构成重大风险的漏洞）。",
+		"fix_deferred":        "该软件包在此平台上受该漏洞的影响, 并且在未来可能会修复",
+		"end_of_life":         "该软件包已被识别包含受影响的组件，但未进行确定其是否受此漏洞影响的分析。",
 	}
 	VulnHeaderValues = []string{
-		"Target", "Type", "Class", "Vulnerability ID", "Title",
-		"Severity Source", "Severity", "Package Name", "Package Version", "Package Path",
-		"Fixed Version", "Status", "Published Date", "Last Modified Date",
+		"扫描对象", "扫描类型", "软件包类别", "漏洞编号", "漏洞名称",
+		"威胁等级来源", "威胁等级", "软件包名称", "软件包版本", "软件包路径",
+		"修复版本", "漏洞状态", "公布时间", "上次修改时间",
 	}
 	VulnHeaderWidths = map[string]float64{
 		"A": 10, "B": 10, "C": 25, "D": 21, "E": 50,
@@ -228,7 +235,7 @@ func parseVulnData(resultTarget string, resultType ftypes.TargetType, resultClas
 	data = append(data, vuln.VulnerabilityID)
 	data = append(data, vuln.Title)
 	data = append(data, string(vuln.SeveritySource))
-	data = append(data, vuln.Severity)
+	data = append(data, ChineseSeverity[vuln.Severity])
 	data = append(data, vuln.PkgName)
 	data = append(data, vuln.InstalledVersion)
 	data = append(data, vuln.PkgPath)
