@@ -1,19 +1,22 @@
 # 1. 概述
+
 ## 1.1 制品信息
-容器镜像 sonobuoy/kube-hunter:v0.2.0 基于 alpine 3.10.3 操作系统构建，适用于 amd64 架构，并在 2024-11-12 15:53:21 的安全扫描中发现了潜在的安全问题。
+
+容器镜像 sonobuoy/kube-hunter:v0.2.0 基于 alpine 3.10.3 操作系统构建，适用于 amd64 架构，并在 2024 年 11 月 12 日 15:53:21 的安全扫描中发现了潜在的安全问题。
 
 | 制品类型 | 容器镜像 |
 |--- | --- |
 | 制品名称 | sonobuoy/kube-hunter:v0.2.0 |
-| 创建时间 | 2020-01-24 04:44:17 |
+| 创建时间 | 2020 年 01 月 24 日 04:44:17 |
 | 架构 | amd64 |
 | 操作系统 | alpine 3.10.3 |
-| 镜像 ID | sha256:983660753fb37dd81c08ce15a25c00bc0981813721ce14a1a2c9a1e953f533a9 |
 | 仓库标签 | sonobuoy/kube-hunter:v0.2.0 |
+| 镜像 ID | sha256:983660753fb37dd81c08ce15a25c00bc0981813721ce14a1a2c9a1e953f533a9 |
 | Docker 版本 | 19.03.5 |
-| 扫描时间 | 2024-11-12 15:53:21 |
+| 扫描时间 | 2024 年 11 月 12 日 15:53:21 |
 
 ## 1.2 镜像配置
+
 镜像创建历史记录如下所示，请手动检查是否有可疑的执行命令，例如下载恶意文件等。
 
 | 创建时间 | 历史记录 |
@@ -51,6 +54,7 @@
 | 环境变量 | PYTHON_GET_PIP_SHA256=b86f36cc4345ae87bfd4f10ef6b2dbfa7a872fbff70608a1e43944d283fd0eee |
 
 ## 1.3 漏洞概览
+
 本次共扫描出 43 个漏洞，超危漏洞有 1 个，占比 2.33% ；高危漏洞有 19 个，占比 44.19% 。
 
 |  | 超危 | 高危 | 中危 | 低危 | 未知 | 总计 |
@@ -63,39 +67,39 @@
 
 | 可修复漏洞 | 漏洞数量 |
 |--- | --- |
+| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
+| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
+| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
 | CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
+| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
+| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
 | CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
-| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
-| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
-| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
-| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
 | CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
-| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
 | CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
-| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
-| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
-| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2021-30139 | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
-| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
-| CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
-| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
-| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
-| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
-| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
-| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
-| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
 | CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
-| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
+| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
+| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
+| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
+| CVE-2021-30139 | 1 |
+| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
+| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
+| CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
+| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
 | CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
+| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
+| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
+| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
+| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
+| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
+| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
+| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
 
 包含漏洞的软件包如下所示。
 
@@ -105,69 +109,73 @@
 | libcrypto1.1 | 8 |
 | urllib3 | 4 |
 | sqlite-libs | 3 |
-| apk-tools | 2 |
 | requests | 2 |
+| apk-tools | 2 |
 | certifi | 2 |
 | setuptools | 2 |
 | pip | 2 |
-| libcom_err | 1 |
-| musl-utils | 1 |
-| ssl_client | 1 |
-| idna | 1 |
 | musl | 1 |
-| future | 1 |
-| tcpdump | 1 |
 | krb5-libs | 1 |
-| busybox | 1 |
+| libcom_err | 1 |
 | wheel | 1 |
+| musl-utils | 1 |
+| future | 1 |
+| busybox | 1 |
+| ssl_client | 1 |
+| tcpdump | 1 |
+| idna | 1 |
 
-全量漏洞如下所示，漏洞详情请看第 2 部分的扫描结果。
+全量漏洞如下所示，漏洞详情请看第二部分的扫描结果。
 
 | 漏洞名称 | 漏洞数量 |
 |--- | --- |
-| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
-| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
-| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
-| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
-| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
+| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
 | CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
+| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
 | CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
+| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
+| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
+| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
+| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
 | CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
-| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
-| CVE-2021-30139 | 1 |
-| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
 | CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
 | CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
-| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
-| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
-| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
+| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
+| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
 | CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
 | CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
-| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
-| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
-| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
+| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
+| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
 | CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
 | CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
+| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
 | CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
+| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
+| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2021-30139 | 1 |
+| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
 
 # 2. 扫描结果
+
 ## 2.1 sonobuoy/kube-hunter:v0.2.0 (alpine 3.10.3)
+
 | 扫描目标 | sonobuoy/kube-hunter:v0.2.0 (alpine 3.10.3) |
 |--- | --- |
 | 软件包类型 | 系统层软件包 |
 | 目标类型 | alpine |
 
 ### 2.1.1 CVE-2021-36159:libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash
+
 #### 2.1.1.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/apk-tools@2.10.4-r2?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | apk-tools |
@@ -176,19 +184,22 @@
 | 修复版本 | 2.10.7-r0 |
 
 #### 2.1.1.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-36159 |
 |--- | --- |
-| 威胁等级 | CRITICAL |
-| 状态 | fixed |
 | 漏洞标题 | libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash |
+| 威胁等级 | 超危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-08-03 14:15:08 |
-| 上次修改时间 | 2023-11-07 03:36:43 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 08 月 03 日 22:15:08 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:36:43 |
 
 #### 2.1.1.3 漏洞描述
+
 libfetch before 2021-07-26, as used in apk-tools, xbps, and other products, mishandles numeric strings for the FTP and HTTP protocols. The FTP passive mode implementation allows an out-of-bounds read because strtol is used to parse the relevant numbers into address bytes. It does not check if the line ends prematurely. If it does, the for-loop condition checks for the '\0' terminator one byte too late.
 
 #### 2.1.1.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-36159
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-36159
@@ -202,7 +213,9 @@ libfetch before 2021-07-26, as used in apk-tools, xbps, and other products, mish
 - https://www.cve.org/CVERecord?id=CVE-2021-36159
 
 ### 2.1.2 CVE-2021-30139
+
 #### 2.1.2.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/apk-tools@2.10.4-r2?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | apk-tools |
@@ -211,25 +224,30 @@ libfetch before 2021-07-26, as used in apk-tools, xbps, and other products, mish
 | 修复版本 | 2.10.6-r0 |
 
 #### 2.1.2.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-30139 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-04-21 16:15:08 |
-| 上次修改时间 | 2021-04-22 18:21:47 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 04 月 22 日 00:15:08 |
+| 上次修改时间 | 2021 年 04 月 23 日 02:21:47 |
 
 #### 2.1.2.3 漏洞描述
+
 In Alpine Linux apk-tools before 2.12.5, the tarball parser allows a buffer overflow and crash.
 
 #### 2.1.2.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-30139
 - https://secdb.alpinelinux.org/
 - https://gitlab.alpinelinux.org/alpine/apk-tools/-/issues/10741
 - https://gitlab.alpinelinux.org/alpine/aports/-/issues/12606
 
 ### 2.1.3 CVE-2021-28831:busybox: invalid free or segmentation fault via malformed gzip data
+
 #### 2.1.3.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/busybox@1.30.1-r3?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | busybox |
@@ -238,19 +256,22 @@ In Alpine Linux apk-tools before 2.12.5, the tarball parser allows a buffer over
 | 修复版本 | 1.30.1-r5 |
 
 #### 2.1.3.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-28831 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | busybox: invalid free or segmentation fault via malformed gzip data |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-19 05:15:13 |
-| 上次修改时间 | 2023-11-07 03:32:23 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 19 日 13:15:13 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:32:23 |
 
 #### 2.1.3.3 漏洞描述
+
 decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the huft_build result pointer, with a resultant invalid free or segmentation fault, via malformed gzip data.
 
 #### 2.1.3.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-28831
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-28831
@@ -267,7 +288,9 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 - https://www.cve.org/CVERecord?id=CVE-2021-28831
 
 ### 2.1.4 CVE-2020-28196:krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS
+
 #### 2.1.4.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/krb5-libs@1.17-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | krb5-libs |
@@ -276,19 +299,22 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 | 修复版本 | 1.17.2-r0 |
 
 #### 2.1.4.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-28196 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-11-06 08:15:13 |
-| 上次修改时间 | 2023-11-07 03:21:07 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 11 月 06 日 16:15:13 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:21:07 |
 
 #### 2.1.4.3 漏洞描述
+
 MIT Kerberos 5 (aka krb5) before 1.17.2 and 1.18.x before 1.18.3 allows unbounded recursion via an ASN.1-encoded Kerberos message because the lib/krb5/asn.1/asn1_encode.c support for BER indefinite lengths lacks a recursion limit.
 
 #### 2.1.4.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-28196
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2020-28196
@@ -313,7 +339,9 @@ MIT Kerberos 5 (aka krb5) before 1.17.2 and 1.18.x before 1.18.3 allows unbounde
 - https://www.oracle.com/security-alerts/cpuapr2022.html
 
 ### 2.1.5 CVE-2019-5188:e2fsprogs: Out-of-bounds write in e2fsck/rehash.c
+
 #### 2.1.5.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcom_err@1.45.2-r1?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcom_err |
@@ -322,19 +350,22 @@ MIT Kerberos 5 (aka krb5) before 1.17.2 and 1.18.x before 1.18.3 allows unbounde
 | 修复版本 | 1.45.5-r0 |
 
 #### 2.1.5.2 漏洞信息
+
 | 漏洞编号 | CVE-2019-5188 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | e2fsprogs: Out-of-bounds write in e2fsck/rehash.c |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-01-08 16:15:11 |
-| 上次修改时间 | 2023-11-07 03:11:27 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 01 月 09 日 00:15:11 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:11:27 |
 
 #### 2.1.5.3 漏洞描述
+
 A code execution vulnerability exists in the directory rehashing functionality of E2fsprogs e2fsck 1.45.4. A specially crafted ext4 directory can cause an out-of-bounds write on the stack, resulting in code execution. An attacker can corrupt a partition to trigger this vulnerability.
 
 #### 2.1.5.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2019-5188
 - https://secdb.alpinelinux.org/
 - http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00004.html
@@ -353,7 +384,9 @@ A code execution vulnerability exists in the directory rehashing functionality o
 - https://www.cve.org/CVERecord?id=CVE-2019-5188
 
 ### 2.1.6 CVE-2020-1967:openssl: Segmentation fault in SSL_check_chain causes denial of service
+
 #### 2.1.6.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -362,19 +395,22 @@ A code execution vulnerability exists in the directory rehashing functionality o
 | 修复版本 | 1.1.1g-r0 |
 
 #### 2.1.6.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-1967 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: Segmentation fault in SSL_check_chain causes denial of service |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-04-21 14:15:11 |
-| 上次修改时间 | 2023-11-07 03:19:39 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 04 月 21 日 22:15:11 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:19:39 |
 
 #### 2.1.6.3 漏洞描述
+
 Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the "signature_algorithms_cert" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).
 
 #### 2.1.6.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-1967
 - https://secdb.alpinelinux.org/
 - http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html
@@ -424,7 +460,9 @@ Server or client applications that call the SSL_check_chain() function during or
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.7 CVE-2021-23840:openssl: integer overflow in CipherUpdate
+
 #### 2.1.7.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -433,19 +471,22 @@ Server or client applications that call the SSL_check_chain() function during or
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.7.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23840 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: integer overflow in CipherUpdate |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:17 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
 #### 2.1.7.3 漏洞描述
+
 Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).
 
 #### 2.1.7.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23840
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-23840
@@ -485,7 +526,9 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.8 CVE-2021-3450:openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT
+
 #### 2.1.8.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -494,19 +537,22 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 | 修复版本 | 1.1.1k-r0 |
 
 #### 2.1.8.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-3450 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-25 15:15:13 |
-| 上次修改时间 | 2023-11-07 03:38:00 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 25 日 23:15:13 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:38:00 |
 
 #### 2.1.8.3 漏洞描述
+
 The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a "purpose" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named "purpose" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j).
 
 #### 2.1.8.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-3450
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/03/27/1
@@ -545,7 +591,9 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 - https://www.tenable.com/security/tns-2021-09
 
 ### 2.1.9 CVE-2019-1551:openssl: Integer overflow in RSAZ modular exponentiation on x86_64
+
 #### 2.1.9.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -554,19 +602,22 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 | 修复版本 | 1.1.1d-r2 |
 
 #### 2.1.9.2 漏洞信息
+
 | 漏洞编号 | CVE-2019-1551 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: Integer overflow in RSAZ modular exponentiation on x86_64 |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2019-12-06 18:15:12 |
-| 上次修改时间 | 2023-11-07 03:08:28 |
+| 状态 | fixed |
+| 披露时间 | 2019 年 12 月 07 日 02:15:12 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:08:28 |
 
 #### 2.1.9.3 漏洞描述
+
 There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t).
 
 #### 2.1.9.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2019-1551
 - https://secdb.alpinelinux.org/
 - http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00030.html
@@ -603,7 +654,9 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.10 CVE-2020-1971:openssl: EDIPARTYNAME NULL pointer de-reference
+
 #### 2.1.10.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -612,19 +665,22 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 | 修复版本 | 1.1.1i-r0 |
 
 #### 2.1.10.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-1971 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: EDIPARTYNAME NULL pointer de-reference |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-12-08 16:15:11 |
-| 上次修改时间 | 2024-06-21 19:15:16 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 12 月 09 日 00:15:11 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
 #### 2.1.10.3 漏洞描述
+
 The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the "-crl_download" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w).
 
 #### 2.1.10.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-1971
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/09/14/2
@@ -662,7 +718,9 @@ The X.509 GeneralName type is a generic type for representing different types of
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.11 CVE-2021-23841:openssl: NULL pointer dereference in X509_issuer_and_serial_hash()
+
 #### 2.1.11.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -671,19 +729,22 @@ The X.509 GeneralName type is a generic type for representing different types of
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.11.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23841 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: NULL pointer dereference in X509_issuer_and_serial_hash() |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:17 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
 #### 2.1.11.3 漏洞描述
+
 The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).
 
 #### 2.1.11.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23841
 - https://secdb.alpinelinux.org/
 - http://seclists.org/fulldisclosure/2021/May/67
@@ -726,7 +787,9 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 - https://www.tenable.com/security/tns-2021-09
 
 ### 2.1.12 CVE-2021-3449:openssl: NULL pointer dereference in signature_algorithms processing
+
 #### 2.1.12.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -735,19 +798,22 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 | 修复版本 | 1.1.1k-r0 |
 
 #### 2.1.12.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-3449 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: NULL pointer dereference in signature_algorithms processing |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-25 15:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:19 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 25 日 23:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:19 |
 
 #### 2.1.12.3 漏洞描述
+
 An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).
 
 #### 2.1.12.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-3449
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/03/27/1
@@ -796,7 +862,9 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.13 CVE-2021-23839:openssl: incorrect SSLv2 rollback protection
+
 #### 2.1.13.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libcrypto1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libcrypto1.1 |
@@ -805,19 +873,22 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.13.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23839 |
 |--- | --- |
-| 威胁等级 | LOW |
-| 状态 | fixed |
 | 漏洞标题 | openssl: incorrect SSLv2 rollback protection |
+| 威胁等级 | 低危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:16 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
 #### 2.1.13.3 漏洞描述
+
 OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a server that is configured to support both SSLv2 and more recent SSL and TLS versions then a check is made for a version rollback attack when unpadding an RSA signature. Clients that support SSL or TLS versions greater than SSLv2 are supposed to use a special form of padding. A server that supports greater than SSLv2 is supposed to reject connection attempts from a client where this special form of padding is present, because this indicates that a version rollback has occurred (i.e. both client and server support greater than SSLv2, and yet this is the version that is being requested). The implementation of this padding check inverted the logic so that the connection attempt is accepted if the padding is present, and rejected if it is absent. This means that such as server will accept a connection if a version rollback attack has occurred. Further the server will erroneously reject a connection if a normal SSLv2 connection attempt is made. Only OpenSSL 1.0.2 servers from version 1.0.2s to 1.0.2x are affected by this issue. In order to be vulnerable a 1.0.2 server must: 1) have configured SSLv2 support at compile time (this is off by default), 2) have configured SSLv2 support at runtime (this is off by default), 3) have configured SSLv2 ciphersuites (these are not in the default ciphersuite list) OpenSSL 1.1.1 does not have SSLv2 support and therefore is not vulnerable to this issue. The underlying error is in the implementation of the RSA_padding_check_SSLv23() function. This also affects the RSA_SSLV23_PADDING padding mode used by various other functions. Although 1.1.1 does not support SSLv2 the RSA_padding_check_SSLv23() function still exists, as does the RSA_SSLV23_PADDING padding mode. Applications that directly call that function or use that padding mode will encounter this issue. However since there is no support for the SSLv2 protocol in 1.1.1 this is considered a bug and not a security issue in that version. OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.0.2y (Affected 1.0.2s-1.0.2x).
 
 #### 2.1.13.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23839
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-23839
@@ -835,7 +906,9 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 - https://www.oracle.com/security-alerts/cpuoct2021.html
 
 ### 2.1.14 CVE-2020-1967:openssl: Segmentation fault in SSL_check_chain causes denial of service
+
 #### 2.1.14.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -844,19 +917,22 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 | 修复版本 | 1.1.1g-r0 |
 
 #### 2.1.14.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-1967 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: Segmentation fault in SSL_check_chain causes denial of service |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-04-21 14:15:11 |
-| 上次修改时间 | 2023-11-07 03:19:39 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 04 月 21 日 22:15:11 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:19:39 |
 
 #### 2.1.14.3 漏洞描述
+
 Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the "signature_algorithms_cert" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).
 
 #### 2.1.14.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-1967
 - https://secdb.alpinelinux.org/
 - http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html
@@ -906,7 +982,9 @@ Server or client applications that call the SSL_check_chain() function during or
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.15 CVE-2021-23840:openssl: integer overflow in CipherUpdate
+
 #### 2.1.15.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -915,19 +993,22 @@ Server or client applications that call the SSL_check_chain() function during or
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.15.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23840 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: integer overflow in CipherUpdate |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:17 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
 #### 2.1.15.3 漏洞描述
+
 Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).
 
 #### 2.1.15.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23840
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-23840
@@ -967,7 +1048,9 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.16 CVE-2021-3450:openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT
+
 #### 2.1.16.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -976,19 +1059,22 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 | 修复版本 | 1.1.1k-r0 |
 
 #### 2.1.16.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-3450 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-25 15:15:13 |
-| 上次修改时间 | 2023-11-07 03:38:00 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 25 日 23:15:13 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:38:00 |
 
 #### 2.1.16.3 漏洞描述
+
 The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a "purpose" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named "purpose" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j).
 
 #### 2.1.16.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-3450
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/03/27/1
@@ -1027,7 +1113,9 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 - https://www.tenable.com/security/tns-2021-09
 
 ### 2.1.17 CVE-2019-1551:openssl: Integer overflow in RSAZ modular exponentiation on x86_64
+
 #### 2.1.17.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -1036,19 +1124,22 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 | 修复版本 | 1.1.1d-r2 |
 
 #### 2.1.17.2 漏洞信息
+
 | 漏洞编号 | CVE-2019-1551 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: Integer overflow in RSAZ modular exponentiation on x86_64 |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2019-12-06 18:15:12 |
-| 上次修改时间 | 2023-11-07 03:08:28 |
+| 状态 | fixed |
+| 披露时间 | 2019 年 12 月 07 日 02:15:12 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:08:28 |
 
 #### 2.1.17.3 漏洞描述
+
 There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t).
 
 #### 2.1.17.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2019-1551
 - https://secdb.alpinelinux.org/
 - http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00030.html
@@ -1085,7 +1176,9 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.18 CVE-2020-1971:openssl: EDIPARTYNAME NULL pointer de-reference
+
 #### 2.1.18.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -1094,19 +1187,22 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 | 修复版本 | 1.1.1i-r0 |
 
 #### 2.1.18.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-1971 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: EDIPARTYNAME NULL pointer de-reference |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-12-08 16:15:11 |
-| 上次修改时间 | 2024-06-21 19:15:16 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 12 月 09 日 00:15:11 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
 #### 2.1.18.3 漏洞描述
+
 The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the "-crl_download" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w).
 
 #### 2.1.18.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-1971
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/09/14/2
@@ -1144,7 +1240,9 @@ The X.509 GeneralName type is a generic type for representing different types of
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.19 CVE-2021-23841:openssl: NULL pointer dereference in X509_issuer_and_serial_hash()
+
 #### 2.1.19.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -1153,19 +1251,22 @@ The X.509 GeneralName type is a generic type for representing different types of
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.19.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23841 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: NULL pointer dereference in X509_issuer_and_serial_hash() |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:17 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
 #### 2.1.19.3 漏洞描述
+
 The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).
 
 #### 2.1.19.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23841
 - https://secdb.alpinelinux.org/
 - http://seclists.org/fulldisclosure/2021/May/67
@@ -1208,7 +1309,9 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 - https://www.tenable.com/security/tns-2021-09
 
 ### 2.1.20 CVE-2021-3449:openssl: NULL pointer dereference in signature_algorithms processing
+
 #### 2.1.20.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -1217,19 +1320,22 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 | 修复版本 | 1.1.1k-r0 |
 
 #### 2.1.20.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-3449 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | openssl: NULL pointer dereference in signature_algorithms processing |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-25 15:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:19 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 25 日 23:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:19 |
 
 #### 2.1.20.3 漏洞描述
+
 An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).
 
 #### 2.1.20.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-3449
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2021/03/27/1
@@ -1278,7 +1384,9 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 - https://www.tenable.com/security/tns-2021-10
 
 ### 2.1.21 CVE-2021-23839:openssl: incorrect SSLv2 rollback protection
+
 #### 2.1.21.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/libssl1.1@1.1.1d-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | libssl1.1 |
@@ -1287,19 +1395,22 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 | 修复版本 | 1.1.1j-r0 |
 
 #### 2.1.21.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-23839 |
 |--- | --- |
-| 威胁等级 | LOW |
-| 状态 | fixed |
 | 漏洞标题 | openssl: incorrect SSLv2 rollback protection |
+| 威胁等级 | 低危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-02-16 17:15:13 |
-| 上次修改时间 | 2024-06-21 19:15:16 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 02 月 17 日 01:15:13 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
 #### 2.1.21.3 漏洞描述
+
 OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a server that is configured to support both SSLv2 and more recent SSL and TLS versions then a check is made for a version rollback attack when unpadding an RSA signature. Clients that support SSL or TLS versions greater than SSLv2 are supposed to use a special form of padding. A server that supports greater than SSLv2 is supposed to reject connection attempts from a client where this special form of padding is present, because this indicates that a version rollback has occurred (i.e. both client and server support greater than SSLv2, and yet this is the version that is being requested). The implementation of this padding check inverted the logic so that the connection attempt is accepted if the padding is present, and rejected if it is absent. This means that such as server will accept a connection if a version rollback attack has occurred. Further the server will erroneously reject a connection if a normal SSLv2 connection attempt is made. Only OpenSSL 1.0.2 servers from version 1.0.2s to 1.0.2x are affected by this issue. In order to be vulnerable a 1.0.2 server must: 1) have configured SSLv2 support at compile time (this is off by default), 2) have configured SSLv2 support at runtime (this is off by default), 3) have configured SSLv2 ciphersuites (these are not in the default ciphersuite list) OpenSSL 1.1.1 does not have SSLv2 support and therefore is not vulnerable to this issue. The underlying error is in the implementation of the RSA_padding_check_SSLv23() function. This also affects the RSA_SSLV23_PADDING padding mode used by various other functions. Although 1.1.1 does not support SSLv2 the RSA_padding_check_SSLv23() function still exists, as does the RSA_SSLV23_PADDING padding mode. Applications that directly call that function or use that padding mode will encounter this issue. However since there is no support for the SSLv2 protocol in 1.1.1 this is considered a bug and not a security issue in that version. OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.0.2y (Affected 1.0.2s-1.0.2x).
 
 #### 2.1.21.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-23839
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-23839
@@ -1317,7 +1428,9 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 - https://www.oracle.com/security-alerts/cpuoct2021.html
 
 ### 2.1.22 CVE-2020-28928:In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ...
+
 #### 2.1.22.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/musl@1.1.22-r3?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | musl |
@@ -1326,19 +1439,22 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 | 修复版本 | 1.1.22-r4 |
 
 #### 2.1.22.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-28928 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-11-24 18:15:12 |
-| 上次修改时间 | 2023-11-07 03:21:24 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 11 月 25 日 02:15:12 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:21:24 |
 
 #### 2.1.22.3 漏洞描述
+
 In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow).
 
 #### 2.1.22.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-28928
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2020/11/20/4
@@ -1356,7 +1472,9 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 - https://www.oracle.com/security-alerts/cpuoct2021.html
 
 ### 2.1.23 CVE-2020-28928:In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ...
+
 #### 2.1.23.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/musl-utils@1.1.22-r3?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | musl-utils |
@@ -1365,19 +1483,22 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 | 修复版本 | 1.1.22-r4 |
 
 #### 2.1.23.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-28928 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-11-24 18:15:12 |
-| 上次修改时间 | 2023-11-07 03:21:24 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 11 月 25 日 02:15:12 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:21:24 |
 
 #### 2.1.23.3 漏洞描述
+
 In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow).
 
 #### 2.1.23.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-28928
 - https://secdb.alpinelinux.org/
 - http://www.openwall.com/lists/oss-security/2020/11/20/4
@@ -1395,7 +1516,9 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 - https://www.oracle.com/security-alerts/cpuoct2021.html
 
 ### 2.1.24 CVE-2019-19244:sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage
+
 #### 2.1.24.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/sqlite-libs@3.28.0-r1?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | sqlite-libs |
@@ -1404,19 +1527,22 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 | 修复版本 | 3.28.0-r2 |
 
 #### 2.1.24.2 漏洞信息
+
 | 漏洞编号 | CVE-2019-19244 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2019-11-25 20:15:11 |
-| 上次修改时间 | 2022-04-15 16:12:54 |
+| 状态 | fixed |
+| 披露时间 | 2019 年 11 月 26 日 04:15:11 |
+| 上次修改时间 | 2022 年 04 月 16 日 00:12:54 |
 
 #### 2.1.24.3 漏洞描述
+
 sqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses both DISTINCT and window functions, and also has certain ORDER BY usage.
 
 #### 2.1.24.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2019-19244
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2019-19244
@@ -1429,7 +1555,9 @@ sqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses b
 - https://www.oracle.com/security-alerts/cpuapr2020.html
 
 ### 2.1.25 CVE-2020-11655:sqlite: malformed window-function query leads to DoS
+
 #### 2.1.25.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/sqlite-libs@3.28.0-r1?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | sqlite-libs |
@@ -1438,19 +1566,22 @@ sqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses b
 | 修复版本 | 3.28.0-r3 |
 
 #### 2.1.25.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-11655 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | sqlite: malformed window-function query leads to DoS |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-04-09 03:15:11 |
-| 上次修改时间 | 2022-04-08 10:34:22 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 04 月 09 日 11:15:11 |
+| 上次修改时间 | 2022 年 04 月 08 日 18:34:22 |
 
 #### 2.1.25.3 漏洞描述
+
 SQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled.
 
 #### 2.1.25.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-11655
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2020-11655
@@ -1473,7 +1604,9 @@ SQLite through 3.31.1 allows attackers to cause a denial of service (segmentatio
 - https://www3.sqlite.org/cgi/src/tktview?name=af4556bb5c
 
 ### 2.1.26 CVE-2019-19242:sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c
+
 #### 2.1.26.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/sqlite-libs@3.28.0-r1?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | sqlite-libs |
@@ -1482,19 +1615,22 @@ SQLite through 3.31.1 allows attackers to cause a denial of service (segmentatio
 | 修复版本 | 3.28.0-r2 |
 
 #### 2.1.26.2 漏洞信息
+
 | 漏洞编号 | CVE-2019-19242 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2019-11-27 17:15:14 |
-| 上次修改时间 | 2022-04-19 15:36:45 |
+| 状态 | fixed |
+| 披露时间 | 2019 年 11 月 28 日 01:15:14 |
+| 上次修改时间 | 2022 年 04 月 19 日 23:36:45 |
 
 #### 2.1.26.3 漏洞描述
+
 SQLite 3.30.1 mishandles pExpr->y.pTab, as demonstrated by the TK_COLUMN case in sqlite3ExprCodeTarget in expr.c.
 
 #### 2.1.26.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2019-19242
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2019-19242
@@ -1507,7 +1643,9 @@ SQLite 3.30.1 mishandles pExpr->y.pTab, as demonstrated by the TK_COLUMN case in
 - https://www.oracle.com/security-alerts/cpuapr2020.html
 
 ### 2.1.27 CVE-2021-28831:busybox: invalid free or segmentation fault via malformed gzip data
+
 #### 2.1.27.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/ssl_client@1.30.1-r3?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | ssl_client |
@@ -1516,19 +1654,22 @@ SQLite 3.30.1 mishandles pExpr->y.pTab, as demonstrated by the TK_COLUMN case in
 | 修复版本 | 1.30.1-r5 |
 
 #### 2.1.27.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-28831 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | busybox: invalid free or segmentation fault via malformed gzip data |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2021-03-19 05:15:13 |
-| 上次修改时间 | 2023-11-07 03:32:23 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 03 月 19 日 13:15:13 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:32:23 |
 
 #### 2.1.27.3 漏洞描述
+
 decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the huft_build result pointer, with a resultant invalid free or segmentation fault, via malformed gzip data.
 
 #### 2.1.27.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-28831
 - https://secdb.alpinelinux.org/
 - https://access.redhat.com/security/cve/CVE-2021-28831
@@ -1545,7 +1686,9 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 - https://www.cve.org/CVERecord?id=CVE-2021-28831
 
 ### 2.1.28 CVE-2020-8037:tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory
+
 #### 2.1.28.1 软件包信息
+
 | 软件包 URL | pkg:apk/alpine/tcpdump@4.9.3-r0?arch=x86_64&distro=3.10.3 |
 |--- | --- |
 | 软件包名称 | tcpdump |
@@ -1554,19 +1697,22 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 | 修复版本 | 4.9.3-r1 |
 
 #### 2.1.28.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-8037 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 披露时间 | 2020-11-04 18:15:20 |
-| 上次修改时间 | 2023-11-07 03:26:15 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 11 月 05 日 02:15:20 |
+| 上次修改时间 | 2023 年 11 月 07 日 11:26:15 |
 
 #### 2.1.28.3 漏洞描述
+
 The ppp decapsulator in tcpdump 4.9.3 can be convinced to allocate a large amount of memory.
 
 #### 2.1.28.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-8037
 - https://secdb.alpinelinux.org/
 - http://seclists.org/fulldisclosure/2021/Apr/51
@@ -1586,13 +1732,16 @@ The ppp decapsulator in tcpdump 4.9.3 can be convinced to allocate a large amoun
 - https://www.cve.org/CVERecord?id=CVE-2020-8037
 
 ## 2.2 Python
+
 | 扫描目标 | Python |
 |--- | --- |
 | 软件包类型 | 应用层软件包 |
 | 目标类型 | python-pkg |
 
 ### 2.2.1 CVE-2023-37920:python-certifi: Removal of e-Tugra root certificate
+
 #### 2.2.1.1 软件包信息
+
 | 软件包 URL | pkg:pypi/certifi@2019.11.28 |
 |--- | --- |
 | 软件包名称 | certifi |
@@ -1600,19 +1749,22 @@ The ppp decapsulator in tcpdump 4.9.3 can be convinced to allocate a large amoun
 | 修复版本 | 2023.7.22 |
 
 #### 2.2.1.2 漏洞信息
+
 | 漏洞编号 | CVE-2023-37920 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | python-certifi: Removal of e-Tugra root certificate |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2023-07-25 21:15:10 |
-| 上次修改时间 | 2023-08-12 06:16:31 |
+| 状态 | fixed |
+| 披露时间 | 2023 年 07 月 26 日 05:15:10 |
+| 上次修改时间 | 2023 年 08 月 12 日 14:16:31 |
 
 #### 2.2.1.3 漏洞描述
+
 Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi prior to version 2023.07.22 recognizes "e-Tugra" root certificates. e-Tugra's root certificates were subject to an investigation prompted by reporting of security issues in their systems. Certifi 2023.07.22 removes root certificates from "e-Tugra" from the root store.
 
 #### 2.2.1.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2023-37920
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2023:7753
@@ -1633,7 +1785,9 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 - https://www.cve.org/CVERecord?id=CVE-2023-37920
 
 ### 2.2.2 CVE-2022-23491:python-certifi: untrusted root certificates
+
 #### 2.2.2.1 软件包信息
+
 | 软件包 URL | pkg:pypi/certifi@2019.11.28 |
 |--- | --- |
 | 软件包名称 | certifi |
@@ -1641,19 +1795,22 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 | 修复版本 | 2022.12.07 |
 
 #### 2.2.2.2 漏洞信息
+
 | 漏洞编号 | CVE-2022-23491 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | python-certifi: untrusted root certificates |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2022-12-07 22:15:09 |
-| 上次修改时间 | 2023-03-24 18:12:24 |
+| 状态 | fixed |
+| 披露时间 | 2022 年 12 月 08 日 06:15:09 |
+| 上次修改时间 | 2023 年 03 月 25 日 02:12:24 |
 
 #### 2.2.2.3 漏洞描述
+
 Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi 2022.12.07 removes root certificates from "TrustCor" from the root store. These are in the process of being removed from Mozilla's trust store. TrustCor's root certificates are being removed pursuant to an investigation prompted by media reporting that TrustCor's ownership also operated a business that produced spyware. Conclusions of Mozilla's investigation can be found in the linked google group discussion.
 
 #### 2.2.2.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2022-23491
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/security/cve/CVE-2022-23491
@@ -1668,7 +1825,9 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 - https://www.cve.org/CVERecord?id=CVE-2022-23491
 
 ### 2.2.3 CVE-2022-40899:python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server
+
 #### 2.2.3.1 软件包信息
+
 | 软件包 URL | pkg:pypi/future@0.18.2 |
 |--- | --- |
 | 软件包名称 | future |
@@ -1676,19 +1835,22 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 | 修复版本 | 0.18.3 |
 
 #### 2.2.3.2 漏洞信息
+
 | 漏洞编号 | CVE-2022-40899 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2022-12-23 00:15:14 |
-| 上次修改时间 | 2023-01-23 18:57:18 |
+| 状态 | fixed |
+| 披露时间 | 2022 年 12 月 23 日 08:15:14 |
+| 上次修改时间 | 2023 年 01 月 24 日 02:57:18 |
 
 #### 2.2.3.3 漏洞描述
+
 An issue discovered in Python Charmers Future 0.18.2 and earlier allows remote attackers to cause a denial of service via crafted Set-Cookie header from malicious web server.
 
 #### 2.2.3.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2022-40899
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/security/cve/CVE-2022-40899
@@ -1707,7 +1869,9 @@ An issue discovered in Python Charmers Future 0.18.2 and earlier allows remote a
 - https://www.cve.org/CVERecord?id=CVE-2022-40899
 
 ### 2.2.4 CVE-2024-3651:python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode()
+
 #### 2.2.4.1 软件包信息
+
 | 软件包 URL | pkg:pypi/idna@2.8 |
 |--- | --- |
 | 软件包名称 | idna |
@@ -1715,19 +1879,22 @@ An issue discovered in Python Charmers Future 0.18.2 and earlier allows remote a
 | 修复版本 | 3.7 |
 
 #### 2.2.4.2 漏洞信息
+
 | 漏洞编号 | CVE-2024-3651 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2024-07-07 18:15:09 |
-| 上次修改时间 | 2024-07-11 14:58:01 |
+| 状态 | fixed |
+| 披露时间 | 2024 年 07 月 08 日 02:15:09 |
+| 上次修改时间 | 2024 年 07 月 11 日 22:58:01 |
 
 #### 2.2.4.3 漏洞描述
+
 A vulnerability was identified in the kjd/idna library, specifically within the `idna.encode()` function, affecting version 3.6. The issue arises from the function's handling of crafted input strings, which can lead to quadratic complexity and consequently, a denial of service condition. This vulnerability is triggered by a crafted input that causes the `idna.encode()` function to process the input with considerable computational load, significantly increasing the processing time in a quadratic manner relative to the input size.
 
 #### 2.2.4.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2024-3651
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2024:3846
@@ -1749,7 +1916,9 @@ A vulnerability was identified in the kjd/idna library, specifically within the 
 - https://www.cve.org/CVERecord?id=CVE-2024-3651
 
 ### 2.2.5 CVE-2021-3572:python-pip: Incorrect handling of unicode separators in git references
+
 #### 2.2.5.1 软件包信息
+
 | 软件包 URL | pkg:pypi/pip@19.3.1 |
 |--- | --- |
 | 软件包名称 | pip |
@@ -1757,19 +1926,22 @@ A vulnerability was identified in the kjd/idna library, specifically within the 
 | 修复版本 | 21.1 |
 
 #### 2.2.5.2 漏洞信息
+
 | 漏洞编号 | CVE-2021-3572 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | python-pip: Incorrect handling of unicode separators in git references |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2021-11-10 18:15:09 |
-| 上次修改时间 | 2024-06-21 19:15:20 |
+| 状态 | fixed |
+| 披露时间 | 2021 年 11 月 11 日 02:15:09 |
+| 上次修改时间 | 2024 年 06 月 22 日 03:15:20 |
 
 #### 2.2.5.3 漏洞描述
+
 A flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1.
 
 #### 2.2.5.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2021-3572
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2021:3254
@@ -1795,7 +1967,9 @@ A flaw was found in python-pip in the way it handled Unicode separators in git r
 - https://www.oracle.com/security-alerts/cpujul2022.html
 
 ### 2.2.6 CVE-2023-5752:pip: Mercurial configuration injectable in repo revision when installing via pip
+
 #### 2.2.6.1 软件包信息
+
 | 软件包 URL | pkg:pypi/pip@19.3.1 |
 |--- | --- |
 | 软件包名称 | pip |
@@ -1803,16 +1977,18 @@ A flaw was found in python-pip in the way it handled Unicode separators in git r
 | 修复版本 | 23.3 |
 
 #### 2.2.6.2 漏洞信息
+
 | 漏洞编号 | CVE-2023-5752 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | pip: Mercurial configuration injectable in repo revision when installing via pip |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2023-10-25 18:17:44 |
-| 上次修改时间 | 2024-06-10 18:15:24 |
+| 状态 | fixed |
+| 披露时间 | 2023 年 10 月 26 日 02:17:44 |
+| 上次修改时间 | 2024 年 06 月 11 日 02:15:24 |
 
 #### 2.2.6.3 漏洞描述
+
 When installing a package from a Mercurial VCS URL  (ie "pip install 
 
 hg+...") with pip prior to v23.3, the specified Mercurial revision could
@@ -1828,6 +2004,7 @@ affect users who aren't installing from Mercurial.
 
 
 #### 2.2.6.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2023-5752
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/security/cve/CVE-2023-5752
@@ -1851,7 +2028,9 @@ affect users who aren't installing from Mercurial.
 - https://www.cve.org/CVERecord?id=CVE-2023-5752
 
 ### 2.2.7 CVE-2023-32681:python-requests: Unintended leak of Proxy-Authorization header
+
 #### 2.2.7.1 软件包信息
+
 | 软件包 URL | pkg:pypi/requests@2.22.0 |
 |--- | --- |
 | 软件包名称 | requests |
@@ -1859,16 +2038,18 @@ affect users who aren't installing from Mercurial.
 | 修复版本 | 2.31.0 |
 
 #### 2.2.7.2 漏洞信息
+
 | 漏洞编号 | CVE-2023-32681 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | python-requests: Unintended leak of Proxy-Authorization header |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2023-05-26 18:15:14 |
-| 上次修改时间 | 2023-09-17 09:15:12 |
+| 状态 | fixed |
+| 披露时间 | 2023 年 05 月 27 日 02:15:14 |
+| 上次修改时间 | 2023 年 09 月 17 日 17:15:12 |
 
 #### 2.2.7.3 漏洞描述
+
 Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint. This is a product of how we use `rebuild_proxies` to reattach the `Proxy-Authorization` header to requests. For HTTP connections sent through the tunnel, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into the tunneled request. This results in Requests forwarding proxy credentials to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate sensitive information. This issue has been patched in version 2.31.0.
 
 
@@ -1876,6 +2057,7 @@ Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Prox
 
 
 #### 2.2.7.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2023-32681
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2023:4350
@@ -1904,7 +2086,9 @@ Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Prox
 - https://www.cve.org/CVERecord?id=CVE-2023-32681
 
 ### 2.2.8 CVE-2024-35195:requests: subsequent requests to the same host ignore cert verification
+
 #### 2.2.8.1 软件包信息
+
 | 软件包 URL | pkg:pypi/requests@2.22.0 |
 |--- | --- |
 | 软件包名称 | requests |
@@ -1912,19 +2096,22 @@ Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Prox
 | 修复版本 | 2.32.0 |
 
 #### 2.2.8.2 漏洞信息
+
 | 漏洞编号 | CVE-2024-35195 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | requests: subsequent requests to the same host ignore cert verification |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2024-05-20 21:15:09 |
-| 上次修改时间 | 2024-06-10 17:16:29 |
+| 状态 | fixed |
+| 披露时间 | 2024 年 05 月 21 日 05:15:09 |
+| 上次修改时间 | 2024 年 06 月 11 日 01:16:29 |
 
 #### 2.2.8.3 漏洞描述
+
 Requests is a HTTP library. Prior to 2.32.0, when making requests through a Requests `Session`, if the first request is made with `verify=False` to disable cert verification, all subsequent requests to the same host will continue to ignore cert verification regardless of changes to the value of `verify`. This behavior will continue for the lifecycle of the connection in the connection pool. This vulnerability is fixed in 2.32.0.
 
 #### 2.2.8.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2024-35195
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/security/cve/CVE-2024-35195
@@ -1940,7 +2127,9 @@ Requests is a HTTP library. Prior to 2.32.0, when making requests through a Requ
 - https://www.cve.org/CVERecord?id=CVE-2024-35195
 
 ### 2.2.9 CVE-2022-40897:pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py
+
 #### 2.2.9.1 软件包信息
+
 | 软件包 URL | pkg:pypi/setuptools@41.6.0 |
 |--- | --- |
 | 软件包名称 | setuptools |
@@ -1948,19 +2137,22 @@ Requests is a HTTP library. Prior to 2.32.0, when making requests through a Requ
 | 修复版本 | 65.5.1 |
 
 #### 2.2.9.2 漏洞信息
+
 | 漏洞编号 | CVE-2022-40897 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2022-12-23 00:15:13 |
-| 上次修改时间 | 2024-10-29 15:35:09 |
+| 状态 | fixed |
+| 披露时间 | 2022 年 12 月 23 日 08:15:13 |
+| 上次修改时间 | 2024 年 10 月 29 日 23:35:09 |
 
 #### 2.2.9.3 漏洞描述
+
 Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py.
 
 #### 2.2.9.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2022-40897
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2023:0952
@@ -1998,7 +2190,9 @@ Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attacke
 - https://www.cve.org/CVERecord?id=CVE-2022-40897
 
 ### 2.2.10 CVE-2024-6345:pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools
+
 #### 2.2.10.1 软件包信息
+
 | 软件包 URL | pkg:pypi/setuptools@41.6.0 |
 |--- | --- |
 | 软件包名称 | setuptools |
@@ -2006,19 +2200,22 @@ Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attacke
 | 修复版本 | 70.0.0 |
 
 #### 2.2.10.2 漏洞信息
+
 | 漏洞编号 | CVE-2024-6345 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2024-07-15 01:15:01 |
-| 上次修改时间 | 2024-07-15 13:00:34 |
+| 状态 | fixed |
+| 披露时间 | 2024 年 07 月 15 日 09:15:01 |
+| 上次修改时间 | 2024 年 07 月 15 日 21:00:34 |
 
 #### 2.2.10.3 漏洞描述
+
 A vulnerability in the package_index module of pypa/setuptools versions up to 69.1.1 allows for remote code execution via its download functions. These functions, which are used to download packages from URLs provided by users or retrieved from package index servers, are susceptible to code injection. If these functions are exposed to user-controlled inputs, such as package URLs, they can execute arbitrary commands on the system. The issue is fixed in version 70.0.
 
 #### 2.2.10.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2024-6345
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2024:6726
@@ -2039,7 +2236,9 @@ A vulnerability in the package_index module of pypa/setuptools versions up to 69
 - https://www.cve.org/CVERecord?id=CVE-2024-6345
 
 ### 2.2.11 CVE-2020-26137:python-urllib3: CRLF injection via HTTP request method
+
 #### 2.2.11.1 软件包信息
+
 | 软件包 URL | pkg:pypi/urllib3@1.24.3 |
 |--- | --- |
 | 软件包名称 | urllib3 |
@@ -2047,19 +2246,22 @@ A vulnerability in the package_index module of pypa/setuptools versions up to 69
 | 修复版本 | 1.25.9 |
 
 #### 2.2.11.2 漏洞信息
+
 | 漏洞编号 | CVE-2020-26137 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | python-urllib3: CRLF injection via HTTP request method |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2020-09-30 18:15:26 |
-| 上次修改时间 | 2023-10-08 14:15:11 |
+| 状态 | fixed |
+| 披露时间 | 2020 年 10 月 01 日 02:15:26 |
+| 上次修改时间 | 2023 年 10 月 08 日 22:15:11 |
 
 #### 2.2.11.3 漏洞描述
+
 urllib3 before 1.25.9 allows CRLF injection if the attacker controls the HTTP request method, as demonstrated by inserting CR and LF control characters in the first argument of putrequest(). NOTE: this is similar to CVE-2020-26116.
 
 #### 2.2.11.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2020-26137
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/security/cve/CVE-2020-26137
@@ -2084,7 +2286,9 @@ urllib3 before 1.25.9 allows CRLF injection if the attacker controls the HTTP re
 - https://www.oracle.com/security-alerts/cpuoct2021.html
 
 ### 2.2.12 CVE-2023-43804:python-urllib3: Cookie request header isn't stripped during cross-origin redirects
+
 #### 2.2.12.1 软件包信息
+
 | 软件包 URL | pkg:pypi/urllib3@1.24.3 |
 |--- | --- |
 | 软件包名称 | urllib3 |
@@ -2092,19 +2296,22 @@ urllib3 before 1.25.9 allows CRLF injection if the attacker controls the HTTP re
 | 修复版本 | 2.0.6, 1.26.17 |
 
 #### 2.2.12.2 漏洞信息
+
 | 漏洞编号 | CVE-2023-43804 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | python-urllib3: Cookie request header isn't stripped during cross-origin redirects |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2023-10-04 17:15:10 |
-| 上次修改时间 | 2024-02-01 00:55:23 |
+| 状态 | fixed |
+| 披露时间 | 2023 年 10 月 05 日 01:15:10 |
+| 上次修改时间 | 2024 年 02 月 01 日 08:55:23 |
 
 #### 2.2.12.3 漏洞描述
+
 urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly. This issue has been patched in urllib3 version 1.26.17 or 2.0.5.
 
 #### 2.2.12.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2023-43804
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2024:2159
@@ -2134,7 +2341,9 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat
 - https://www.cve.org/CVERecord?id=CVE-2023-43804
 
 ### 2.2.13 CVE-2023-45803:urllib3: Request body not stripped after redirect from 303 status changes request method to GET
+
 #### 2.2.13.1 软件包信息
+
 | 软件包 URL | pkg:pypi/urllib3@1.24.3 |
 |--- | --- |
 | 软件包名称 | urllib3 |
@@ -2142,21 +2351,24 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat
 | 修复版本 | 2.0.7, 1.26.18 |
 
 #### 2.2.13.2 漏洞信息
+
 | 漏洞编号 | CVE-2023-45803 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | urllib3: Request body not stripped after redirect from 303 status changes request method to GET |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2023-10-17 20:15:10 |
-| 上次修改时间 | 2023-11-03 22:15:11 |
+| 状态 | fixed |
+| 披露时间 | 2023 年 10 月 18 日 04:15:10 |
+| 上次修改时间 | 2023 年 11 月 04 日 06:15:11 |
 
 #### 2.2.13.3 漏洞描述
+
 urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wouldn't remove the HTTP request body when an HTTP redirect response using status 301, 302, or 303 after the request had its method changed from one that could accept a request body (like `POST`) to `GET` as is required by HTTP RFCs. Although this behavior is not specified in the section for redirects, it can be inferred by piecing together information from different sections and we have observed the behavior in other major HTTP client implementations like curl and web browsers. Because the vulnerability requires a previously trusted service to become compromised in order to have an impact on confidentiality we believe the exploitability of this vulnerability is low. Additionally, many users aren't putting sensitive data in HTTP request bodies, if this is the case then this vulnerability isn't exploitable. Both of the following conditions must be true to be affected by this vulnerability: 1. Using urllib3 and submitting sensitive information in the HTTP request body (such as form data or JSON) and 2. The origin service is compromised and starts redirecting using 301, 302, or 303 to a malicious peer or the redirected-to service becomes compromised. This issue has been addressed in versions 1.26.18 and 2.0.7 and users are advised to update to resolve this issue. Users unable to update should disable redirects for services that aren't expecting to respond with redirects with `redirects=False` and disable automatic redirects with `redirects=False` and handle 301, 302, and 303 redirects manually by stripping the HTTP request body.
 
 
 
 #### 2.2.13.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2023-45803
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2024:2132
@@ -2195,7 +2407,9 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 - https://www.rfc-editor.org/rfc/rfc9110.html#name-get
 
 ### 2.2.14 CVE-2024-37891:urllib3: proxy-authorization request header is not stripped during cross-origin redirects
+
 #### 2.2.14.1 软件包信息
+
 | 软件包 URL | pkg:pypi/urllib3@1.24.3 |
 |--- | --- |
 | 软件包名称 | urllib3 |
@@ -2203,19 +2417,22 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 | 修复版本 | 1.26.19, 2.2.2 |
 
 #### 2.2.14.2 漏洞信息
+
 | 漏洞编号 | CVE-2024-37891 |
 |--- | --- |
-| 威胁等级 | MEDIUM |
-| 状态 | fixed |
 | 漏洞标题 | urllib3: proxy-authorization request header is not stripped during cross-origin redirects |
+| 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2024-06-17 20:15:13 |
-| 上次修改时间 | 2024-06-20 12:44:22 |
+| 状态 | fixed |
+| 披露时间 | 2024 年 06 月 18 日 04:15:13 |
+| 上次修改时间 | 2024 年 06 月 20 日 20:44:22 |
 
 #### 2.2.14.3 漏洞描述
+
  urllib3 is a user-friendly HTTP client library for Python. When using urllib3's proxy support with `ProxyManager`, the `Proxy-Authorization` header is only sent to the configured proxy, as expected. However, when sending HTTP requests *without* using urllib3's proxy support, it's possible to accidentally configure the `Proxy-Authorization` header even though it won't have any effect as the request is not using a forwarding proxy or a tunneling proxy. In those cases, urllib3 doesn't treat the `Proxy-Authorization` HTTP header as one carrying authentication material and thus doesn't strip the header on cross-origin redirects. Because this is a highly unlikely scenario, we believe the severity of this vulnerability is low for almost all users. Out of an abundance of caution urllib3 will automatically strip the `Proxy-Authorization` header during cross-origin redirects to avoid the small chance that users are doing this on accident. Users should use urllib3's proxy support or disable automatic redirects to achieve safe processing of the `Proxy-Authorization` header, but we still decided to strip the header by default in order to further protect users who aren't using the correct approach. We believe the number of usages affected by this advisory is low. It requires all of the following to be true to be exploited: 1. Setting the `Proxy-Authorization` header without using urllib3's built-in proxy support. 2. Not disabling HTTP redirects. 3. Either not using an HTTPS origin server or for the proxy or target origin to redirect to a malicious origin. Users are advised to update to either version 1.26.19 or version 2.2.2. Users unable to upgrade may use the `Proxy-Authorization` header with urllib3's `ProxyManager`, disable HTTP redirects using `redirects=False` when sending requests, or not user the `Proxy-Authorization` header as mitigations.
 
 #### 2.2.14.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2024-37891
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2024:6162
@@ -2237,7 +2454,9 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 - https://www.cve.org/CVERecord?id=CVE-2024-37891
 
 ### 2.2.15 CVE-2022-40898:python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli
+
 #### 2.2.15.1 软件包信息
+
 | 软件包 URL | pkg:pypi/wheel@0.33.6 |
 |--- | --- |
 | 软件包名称 | wheel |
@@ -2245,19 +2464,22 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 | 修复版本 | 0.38.1 |
 
 #### 2.2.15.2 漏洞信息
+
 | 漏洞编号 | CVE-2022-40898 |
 |--- | --- |
-| 威胁等级 | HIGH |
-| 状态 | fixed |
 | 漏洞标题 | python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli |
+| 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 披露时间 | 2022-12-23 00:15:14 |
-| 上次修改时间 | 2022-12-30 22:15:22 |
+| 状态 | fixed |
+| 披露时间 | 2022 年 12 月 23 日 08:15:14 |
+| 上次修改时间 | 2022 年 12 月 31 日 06:15:22 |
 
 #### 2.2.15.3 漏洞描述
+
 An issue discovered in Python Packaging Authority (PyPA) Wheel 0.37.1 and earlier allows remote attackers to cause a denial of service via attacker controlled input to wheel cli.
 
 #### 2.2.15.4 相关链接
+
 - https://avd.aquasec.com/nvd/cve-2022-40898
 - https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip
 - https://access.redhat.com/errata/RHSA-2023:6712
