@@ -26,7 +26,7 @@ image configuration, vulnerability overview, as well as detailed vulnerability i
 ## 🛠️ Installation
 
 ```shell
-trivy plugin install github.com/y4ney/trivy-plugin-report
+trivy plugin install github.com/miao2sec/trivy-plugin-report
 ```
 
 ## 🚀 Usage

@@ -23,7 +23,7 @@ Markdown 格式的文档因其便于编辑和查阅的特点，非常适合作�
 ## 🛠️ 安装方法
 
 ```shell
-trivy plugin install github.com/y4ney/trivy-plugin-report
+trivy plugin install github.com/miao2sec/trivy-plugin-report
 ```
 
 ## 🚀 使用方法
