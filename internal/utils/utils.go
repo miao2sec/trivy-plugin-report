@@ -13,13 +13,21 @@ import (
 	"time"
 )
 
+var ChineseSeverity = map[string]string{
+	"CRITICAL": "超危",
+	"HIGH":     "高危",
+	"MEDIUM":   "中危",
+	"LOW":      "低危",
+	"UNKNOWN":  "未知",
+}
+
 // FormatTime 若时间为空，则正常退出并返回空字符串
 func FormatTime(t *time.Time, Chinese bool) string {
 	if t == nil {
 		return ""
 	}
 	if !Chinese {
-		return t.Format("2006-01-02 15:04:05")
+		return t.Format("2006 年 01 月 02 日 15:04:05")
 	}
 
 	location, err := time.LoadLocation("Asia/Shanghai")
@@ -27,7 +35,7 @@ func FormatTime(t *time.Time, Chinese bool) string {
 		log.Fatal("failed to load location:%w", err)
 	}
 
-	return t.In(location).Format("2006-01-02 15:04:05")
+	return t.In(location).Format("2006 年 01 月 02 日 15:04:05")
 }
 
 // ReadJSONFromFile 从文件中读取 json 文件

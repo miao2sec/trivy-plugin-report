@@ -31,13 +31,6 @@ var (
 		"低危": "74B9FF",
 		"未知": "DFE6E9",
 	}
-	ChineseSeverity = map[string]string{
-		"CRITICAL": "超危",
-		"HIGH":     "高危",
-		"MEDIUM":   "中危",
-		"LOW":      "低危",
-		"UNKNOWN":  "未知",
-	}
 
 	VulnStatuses = map[string]string{
 		"not_affected":        "该软件包在此平台上不受该漏洞的影响",
@@ -56,7 +49,7 @@ var (
 	VulnHeaderWidths = map[string]float64{
 		"A": 10, "B": 10, "C": 25, "D": 21, "E": 50,
 		"F": 12, "G": 10, "H": 12, "I": 20, "J": 50,
-		"K": 20, "L": 42, "M": 20, "N": 20,
+		"K": 20, "L": 42, "M": 25, "N": 25,
 	}
 	DefaultStyle = excelize.Style{
 		Alignment: &excelize.Alignment{WrapText: true, Vertical: "top"},
@@ -235,7 +228,7 @@ func parseVulnData(resultTarget string, resultType ftypes.TargetType, resultClas
 	data = append(data, vuln.VulnerabilityID)
 	data = append(data, vuln.Title)
 	data = append(data, string(vuln.SeveritySource))
-	data = append(data, ChineseSeverity[vuln.Severity])
+	data = append(data, utils.ChineseSeverity[vuln.Severity])
 	data = append(data, vuln.PkgName)
 	data = append(data, vuln.InstalledVersion)
 	data = append(data, vuln.PkgPath)

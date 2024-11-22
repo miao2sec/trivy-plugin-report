@@ -33,22 +33,22 @@ func NewMarkdown(reps ...MdFunc) *Markdown {
 
 // SetH1 一级标题
 func (r *Markdown) SetH1(text string) {
-	r.Data += fmt.Sprintf("# %s\n", text)
+	r.Data += fmt.Sprintf("# %s\n\n", text)
 }
 
 // SetH2 二级标题
 func (r *Markdown) SetH2(text string) {
-	r.Data += fmt.Sprintf("## %s\n", text)
+	r.Data += fmt.Sprintf("## %s\n\n", text)
 }
 
 // SetH3 三级标题
 func (r *Markdown) SetH3(text string) {
-	r.Data += fmt.Sprintf("### %s\n", text)
+	r.Data += fmt.Sprintf("### %s\n\n", text)
 }
 
 // SetH4 四级标题
 func (r *Markdown) SetH4(text string) {
-	r.Data += fmt.Sprintf("#### %s\n", text)
+	r.Data += fmt.Sprintf("#### %s\n\n", text)
 }
 
 // SetText 正文
