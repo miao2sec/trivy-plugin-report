@@ -1,6 +1,6 @@
 name: report
 repository: github.com/miao2sec/trivy-plugin-report
-version: "0.3.0"
+version: "0.3.1"
 maintainer: miao2sec
 output: true
 summary: A trivy plugin that can convert scan results into excel
@@ -11,20 +11,20 @@ platforms:
   - selector:
       os: darwin
       arch: amd64
-    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.0/trivy-plugin-report_0.3.0_darwin-amd64.tar.gz
+    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.1/trivy-plugin-report_0.3.1_darwin-amd64.tar.gz
     bin: ./report
   - selector:
       os: darwin
       arch: arm64
-    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.0/trivy-plugin-report_0.3.0_darwin-arm64.tar.gz
+    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.1/trivy-plugin-report_0.3.1_darwin-arm64.tar.gz
     bin: ./report
   - selector:
       os: linux
       arch: amd64
-    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.0/trivy-plugin-report_0.3.0_linux-amd64.tar.gz
+    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.1/trivy-plugin-report_0.3.1_linux-amd64.tar.gz
     bin: ./report
   - selector:
       os: linux
       arch: arm64
-    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.0/trivy-plugin-report_0.3.0_linux-arm64.tar.gz
+    uri: https://github.com/miao2sec/trivy-plugin-report/releases/download/v0.3.1/trivy-plugin-report_0.3.1_linux-arm64.tar.gz
     bin: ./report
