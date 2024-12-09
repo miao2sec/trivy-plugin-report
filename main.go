@@ -41,6 +41,11 @@ func run() error {
 		"",
 		"specify the name of markdown file",
 	)
+	brief := flag.Bool(
+		"brief",
+		false,
+		"report as markdown briefly(remove vulnerability descriptions and reference links.)",
+	)
 	flag.Parse()
 
 	if *excelFile != "" {
@@ -56,7 +61,7 @@ func run() error {
 		if !strings.HasSuffix(*markdownFile, ".md") {
 			log.Fatal("just support .md file")
 		}
-		if err := markdown.Export(&report, *markdownFile); err != nil {
+		if err := markdown.Export(&report, *markdownFile, *brief); err != nil {
 			return err
 		}
 		log.Infof("success to export %s for %s", *markdownFile, report.ArtifactName)

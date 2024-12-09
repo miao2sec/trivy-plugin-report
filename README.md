@@ -60,6 +60,11 @@ trivy image -f json <image_name> | trivy report [plugin_flags]
     ```
    ![img.png](img/markdown.png)
    详情请看 [kube-hunter.md](./internal/markdown/testdata/kube-hunter.md)
+4. 使用 `--brief` 将 Markdown 简化。即，去除描述和相关链接。 
+    ```bash
+   trivy image -f json tomcat:9.0.97-jre8-temurin-jammy | trivy report --markdown-file output.md --brief
+    ```
+   详情请看 [tomcat.md](./internal/markdown/testdata/tomcat.md)
 ## TODO
 - [x] 📝 导出 markdown 文档
 - [ ] 📝 导出 PDF 文档

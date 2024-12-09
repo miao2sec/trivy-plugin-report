@@ -16,6 +16,7 @@ func TestExport(t *testing.T) {
 	type args struct {
 		report   *types.Report
 		filePath string
+		brief    bool
 	}
 
 	tests := []struct {
@@ -28,6 +29,7 @@ func TestExport(t *testing.T) {
 			args: args{
 				report:   report,
 				filePath: "testdata/kube-hunter.md",
+				brief:    false,
 			},
 			wantErr: false,
 		},
@@ -36,6 +38,7 @@ func TestExport(t *testing.T) {
 			args: args{
 				report:   report,
 				filePath: "testdata/tomcat.md",
+				brief:    true,
 			},
 			wantErr: false,
 		},
@@ -46,7 +49,7 @@ func TestExport(t *testing.T) {
 			if err != nil {
 				t.Errorf("Failed to read json from file:%v", err)
 			}
-			if err := Export(tt.args.report, tt.args.filePath); (err != nil) != tt.wantErr {
+			if err := Export(tt.args.report, tt.args.filePath, tt.args.brief); (err != nil) != tt.wantErr {
 				t.Errorf("Export() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})

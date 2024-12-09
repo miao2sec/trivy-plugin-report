@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func Export(report *types.Report, fileName string) (err error) {
+func Export(report *types.Report, fileName string, brief bool) (err error) {
 	md := utils.NewMarkdown(utils.WithName(fileName))
 
 	md.SetH1("1. 概述")
@@ -19,7 +19,7 @@ func Export(report *types.Report, fileName string) (err error) {
 	md = AddVulnOverview(report, md)
 
 	md.SetH1("2. 扫描结果")
-	md = AddScanResult(report, md)
+	md = AddScanResult(report, md, brief)
 
 	return os.WriteFile(md.Name, []byte(md.Data), os.ModePerm)
 }
@@ -111,7 +111,7 @@ func AddImageConf(ImageConfig v1.ConfigFile, md *utils.Markdown) *utils.Markdown
 	md.SetTable([]string{"配置类型", "内容"}, confs)
 	return md
 }
-func AddScanResult(report *types.Report, md *utils.Markdown) *utils.Markdown {
+func AddScanResult(report *types.Report, md *utils.Markdown, brief bool) *utils.Markdown {
 	for i, result := range report.Results {
 		if result.Vulnerabilities == nil {
 			continue
@@ -148,13 +148,14 @@ func AddScanResult(report *types.Report, md *utils.Markdown) *utils.Markdown {
 			addRow(&vulnInfo, "上次修改时间", utils.FormatTime(vulnerability.LastModifiedDate, true))
 			md.SetTable([]string{"漏洞编号", vulnerability.VulnerabilityID}, vulnInfo)
 
-			// 漏洞描述
-			md.SetH4(fmt.Sprintf("2.%v.%v.3 漏洞描述", i+1, j+1))
-			md.SetText(vulnerability.Description)
-
-			// 相关链接
-			md.SetH4(fmt.Sprintf("2.%v.%v.4 相关链接", i+1, j+1))
-			md.SetUl(append([]string{vulnerability.PrimaryURL, vulnerability.DataSource.URL}, vulnerability.References...))
+			if !brief {
+				// 漏洞描述
+				md.SetH4(fmt.Sprintf("2.%v.%v.3 漏洞描述", i+1, j+1))
+				md.SetText(vulnerability.Description)
+				// 相关链接
+				md.SetH4(fmt.Sprintf("2.%v.%v.4 相关链接", i+1, j+1))
+				md.SetUl(append([]string{vulnerability.PrimaryURL, vulnerability.DataSource.URL}, vulnerability.References...))
+			}
 		}
 	}
 	return md
