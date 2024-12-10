@@ -92,50 +92,50 @@
 
 | 软件包名称 | 包含的漏洞数量 |
 |--- | --- |
-| libkrb5support0 | 3 |
 | libkrb5-3 | 3 |
+| libkrb5support0 | 3 |
 | libk5crypto3 | 3 |
 | libgssapi-krb5-2 | 3 |
-| libncurses6 | 2 |
 | libpam-modules-bin | 2 |
 | libncursesw6 | 2 |
-| ncurses-bin | 2 |
-| libstdc++6 | 2 |
-| libpam-runtime | 2 |
-| libgcc-s1 | 2 |
-| libpam-modules | 2 |
+| libncurses6 | 2 |
 | libtinfo6 | 2 |
 | libpam0g | 2 |
+| libgcc-s1 | 2 |
+| libpam-modules | 2 |
 | ncurses-base | 2 |
 | gcc-12-base | 2 |
-| gnupg-utils | 1 |
-| gpgv | 1 |
-| login | 1 |
-| libc-bin | 1 |
-| wget | 1 |
-| gnupg | 1 |
-| gnupg-l10n | 1 |
-| libc6 | 1 |
-| libpcre3 | 1 |
-| libssl3 | 1 |
-| libzstd1 | 1 |
-| gpg | 1 |
-| gpg-agent | 1 |
-| libsystemd0 | 1 |
-| libudev1 | 1 |
-| libcurl4 | 1 |
+| libstdc++6 | 2 |
+| libpam-runtime | 2 |
+| ncurses-bin | 2 |
 | openssl | 1 |
-| gpg-wks-client | 1 |
-| gpgsm | 1 |
-| dirmngr | 1 |
-| gpgconf | 1 |
+| login | 1 |
+| libsystemd0 | 1 |
+| libc6 | 1 |
 | gpg-wks-server | 1 |
+| libpcre3 | 1 |
+| gnupg-l10n | 1 |
+| gpgsm | 1 |
+| libcurl4 | 1 |
+| wget | 1 |
 | libpcre2-8-0 | 1 |
-| locales | 1 |
-| passwd | 1 |
+| gpg | 1 |
+| gnupg-utils | 1 |
+| libc-bin | 1 |
+| gnupg | 1 |
 | coreutils | 1 |
+| gpg-agent | 1 |
+| libssl3 | 1 |
+| libudev1 | 1 |
+| gpg-wks-client | 1 |
+| passwd | 1 |
 | curl | 1 |
 | libgcrypt20 | 1 |
+| gpgconf | 1 |
+| locales | 1 |
+| libzstd1 | 1 |
+| dirmngr | 1 |
+| gpgv | 1 |
 
 全量漏洞如下所示，漏洞详情请看第二部分的扫描结果。
 
@@ -144,24 +144,24 @@
 | CVE-2022-3219 : gnupg: denial of service issue (resource consumption) using compressed packets | 11 |
 | CVE-2023-50495 : ncurses: segmentation fault via _nc_wrap_entry() | 5 |
 | CVE-2023-45918 : ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c | 5 |
-| CVE-2024-10041 : pam: libpam: Libpam vulnerable to read hashed password | 4 |
 | CVE-2024-26461 : krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c | 4 |
+| CVE-2024-10041 : pam: libpam: Libpam vulnerable to read hashed password | 4 |
 | CVE-2024-10963 : pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass | 4 |
-| CVE-2024-26458 : krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c | 4 |
 | CVE-2024-26462 : krb5: Memory leak at /krb5/src/kdc/ndr.c | 4 |
+| CVE-2024-26458 : krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c | 4 |
 | CVE-2023-4039 : gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64 | 3 |
 | CVE-2022-27943 : binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const | 3 |
 | CVE-2016-20013 | 3 |
+| CVE-2023-7008 : systemd-resolved: Unsigned name response in signed zone is not refused when DNSSEC=yes | 2 |
 | CVE-2024-9681 : curl: HSTS subdomain overwrites parent cache entry | 2 |
 | CVE-2024-41996 : openssl: remote attackers (from the client side) to trigger unnecessarily expensive server-side DHE modular-exponentiation calculations | 2 |
 | CVE-2023-29383 : shadow: Improper input validation in shadow-utils package utility chfn | 2 |
-| CVE-2023-7008 : systemd-resolved: Unsigned name response in signed zone is not refused when DNSSEC=yes | 2 |
-| CVE-2022-4899 : zstd: mysql: buffer overrun in util.c | 1 |
-| CVE-2016-2781 : coreutils: Non-privileged session can escape to the parent session in chroot | 1 |
-| CVE-2017-11164 : pcre: OP_KETRMAX feature in the match function in pcre_exec.c | 1 |
 | CVE-2021-31879 : wget: authorization header disclosure on redirect | 1 |
+| CVE-2016-2781 : coreutils: Non-privileged session can escape to the parent session in chroot | 1 |
 | CVE-2024-2236 : libgcrypt: vulnerable to Marvin Attack | 1 |
 | CVE-2022-41409 : pcre2: negative repeat value in a pcre2test subject line leads to inifinite loop | 1 |
+| CVE-2017-11164 : pcre: OP_KETRMAX feature in the match function in pcre_exec.c | 1 |
+| CVE-2022-4899 : zstd: mysql: buffer overrun in util.c | 1 |
 
 # 2. 扫描结果
 
@@ -189,7 +189,7 @@
 | 漏洞标题 | coreutils: Non-privileged session can escape to the parent session in chroot |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2017 年 02 月 07 日 23:59:00 |
 | 上次修改时间 | 2023 年 11 月 07 日 10:32:03 |
 
@@ -211,7 +211,7 @@
 | 漏洞标题 | curl: HSTS subdomain overwrites parent cache entry |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 11 月 06 日 16:15:03 |
 | 上次修改时间 | 2024 年 11 月 07 日 02:17:17 |
 
@@ -232,7 +232,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -253,7 +253,7 @@
 | 漏洞标题 | gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64 |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 09 月 13 日 17:15:15 |
 | 上次修改时间 | 2024 年 08 月 02 日 16:15:14 |
 
@@ -274,7 +274,7 @@
 | 漏洞标题 | binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 03 月 26 日 21:15:07 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:45:32 |
 
@@ -295,7 +295,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -316,7 +316,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -337,7 +337,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -358,7 +358,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -379,7 +379,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -400,7 +400,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -421,7 +421,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -442,7 +442,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -463,7 +463,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -484,7 +484,7 @@
 | 漏洞标题 | gnupg: denial of service issue (resource consumption) using compressed packets |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 02 月 24 日 04:15:12 |
 | 上次修改时间 | 2023 年 05 月 27 日 00:31:34 |
 
@@ -504,7 +504,7 @@
 |--- | --- |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 02 月 19 日 13:15:09 |
 | 上次修改时间 | 2022 年 03 月 04 日 00:43:19 |
 
@@ -524,7 +524,7 @@
 |--- | --- |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 02 月 19 日 13:15:09 |
 | 上次修改时间 | 2022 年 03 月 04 日 00:43:19 |
 
@@ -546,7 +546,7 @@
 | 漏洞标题 | curl: HSTS subdomain overwrites parent cache entry |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 11 月 06 日 16:15:03 |
 | 上次修改时间 | 2024 年 11 月 07 日 02:17:17 |
 
@@ -567,7 +567,7 @@
 | 漏洞标题 | gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64 |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 09 月 13 日 17:15:15 |
 | 上次修改时间 | 2024 年 08 月 02 日 16:15:14 |
 
@@ -588,7 +588,7 @@
 | 漏洞标题 | binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 03 月 26 日 21:15:07 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:45:32 |
 
@@ -609,7 +609,7 @@
 | 漏洞标题 | libgcrypt: vulnerable to Marvin Attack |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 03 月 07 日 06:15:57 |
 | 上次修改时间 | 2024 年 11 月 13 日 02:15:20 |
 
@@ -630,7 +630,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/kdc/ndr.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:01 |
 
@@ -651,7 +651,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:00 |
 
@@ -672,7 +672,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 08 月 15 日 00:35:10 |
 
@@ -693,7 +693,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/kdc/ndr.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:01 |
 
@@ -714,7 +714,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:00 |
 
@@ -735,7 +735,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 08 月 15 日 00:35:10 |
 
@@ -756,7 +756,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/kdc/ndr.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:01 |
 
@@ -777,7 +777,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:00 |
 
@@ -798,7 +798,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 08 月 15 日 00:35:10 |
 
@@ -819,7 +819,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/kdc/ndr.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:01 |
 
@@ -840,7 +840,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 05 月 14 日 23:09:00 |
 
@@ -861,7 +861,7 @@
 | 漏洞标题 | krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 29 日 09:44:18 |
 | 上次修改时间 | 2024 年 08 月 15 日 00:35:10 |
 
@@ -882,7 +882,7 @@
 | 漏洞标题 | ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 17 日 06:15:07 |
 | 上次修改时间 | 2024 年 11 月 01 日 02:35:03 |
 
@@ -903,7 +903,7 @@
 | 漏洞标题 | ncurses: segmentation fault via _nc_wrap_entry() |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 12 日 23:15:07 |
 | 上次修改时间 | 2024 年 01 月 31 日 11:15:08 |
 
@@ -924,7 +924,7 @@
 | 漏洞标题 | ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 17 日 06:15:07 |
 | 上次修改时间 | 2024 年 11 月 01 日 02:35:03 |
 
@@ -945,7 +945,7 @@
 | 漏洞标题 | ncurses: segmentation fault via _nc_wrap_entry() |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 12 日 23:15:07 |
 | 上次修改时间 | 2024 年 01 月 31 日 11:15:08 |
 
@@ -966,7 +966,7 @@
 | 漏洞标题 | pam: libpam: Libpam vulnerable to read hashed password |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 10 月 23 日 22:15:03 |
 | 上次修改时间 | 2024 年 11 月 13 日 05:15:10 |
 
@@ -987,7 +987,7 @@
 | 漏洞标题 | pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 11 月 08 日 00:15:17 |
 | 上次修改时间 | 2024 年 11 月 12 日 02:15:14 |
 
@@ -1008,7 +1008,7 @@
 | 漏洞标题 | pam: libpam: Libpam vulnerable to read hashed password |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 10 月 23 日 22:15:03 |
 | 上次修改时间 | 2024 年 11 月 13 日 05:15:10 |
 
@@ -1029,7 +1029,7 @@
 | 漏洞标题 | pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 11 月 08 日 00:15:17 |
 | 上次修改时间 | 2024 年 11 月 12 日 02:15:14 |
 
@@ -1050,7 +1050,7 @@
 | 漏洞标题 | pam: libpam: Libpam vulnerable to read hashed password |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 10 月 23 日 22:15:03 |
 | 上次修改时间 | 2024 年 11 月 13 日 05:15:10 |
 
@@ -1071,7 +1071,7 @@
 | 漏洞标题 | pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 11 月 08 日 00:15:17 |
 | 上次修改时间 | 2024 年 11 月 12 日 02:15:14 |
 
@@ -1092,7 +1092,7 @@
 | 漏洞标题 | pam: libpam: Libpam vulnerable to read hashed password |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 10 月 23 日 22:15:03 |
 | 上次修改时间 | 2024 年 11 月 13 日 05:15:10 |
 
@@ -1113,7 +1113,7 @@
 | 漏洞标题 | pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 11 月 08 日 00:15:17 |
 | 上次修改时间 | 2024 年 11 月 12 日 02:15:14 |
 
@@ -1134,7 +1134,7 @@
 | 漏洞标题 | pcre2: negative repeat value in a pcre2test subject line leads to inifinite loop |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 07 月 18 日 22:15:12 |
 | 上次修改时间 | 2023 年 07 月 27 日 11:46:09 |
 
@@ -1155,7 +1155,7 @@
 | 漏洞标题 | pcre: OP_KETRMAX feature in the match function in pcre_exec.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2017 年 07 月 11 日 11:29:00 |
 | 上次修改时间 | 2023 年 11 月 07 日 10:38:10 |
 
@@ -1176,7 +1176,7 @@
 | 漏洞标题 | openssl: remote attackers (from the client side) to trigger unnecessarily expensive server-side DHE modular-exponentiation calculations |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 08 月 26 日 14:15:04 |
 | 上次修改时间 | 2024 年 08 月 27 日 00:35:11 |
 
@@ -1197,7 +1197,7 @@
 | 漏洞标题 | gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64 |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 09 月 13 日 17:15:15 |
 | 上次修改时间 | 2024 年 08 月 02 日 16:15:14 |
 
@@ -1218,7 +1218,7 @@
 | 漏洞标题 | binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 03 月 26 日 21:15:07 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:45:32 |
 
@@ -1239,7 +1239,7 @@
 | 漏洞标题 | systemd-resolved: Unsigned name response in signed zone is not refused when DNSSEC=yes |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 23 日 21:15:07 |
 | 上次修改时间 | 2024 年 09 月 17 日 01:16:02 |
 
@@ -1260,7 +1260,7 @@
 | 漏洞标题 | ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 17 日 06:15:07 |
 | 上次修改时间 | 2024 年 11 月 01 日 02:35:03 |
 
@@ -1281,7 +1281,7 @@
 | 漏洞标题 | ncurses: segmentation fault via _nc_wrap_entry() |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 12 日 23:15:07 |
 | 上次修改时间 | 2024 年 01 月 31 日 11:15:08 |
 
@@ -1302,7 +1302,7 @@
 | 漏洞标题 | systemd-resolved: Unsigned name response in signed zone is not refused when DNSSEC=yes |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 23 日 21:15:07 |
 | 上次修改时间 | 2024 年 09 月 17 日 01:16:02 |
 
@@ -1323,7 +1323,7 @@
 | 漏洞标题 | zstd: mysql: buffer overrun in util.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 04 月 01 日 04:15:07 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:59:16 |
 
@@ -1343,7 +1343,7 @@
 |--- | --- |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2022 年 02 月 19 日 13:15:09 |
 | 上次修改时间 | 2022 年 03 月 04 日 00:43:19 |
 
@@ -1364,7 +1364,7 @@
 | 漏洞标题 | shadow: Improper input validation in shadow-utils package utility chfn |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 04 月 15 日 06:15:07 |
 | 上次修改时间 | 2023 年 04 月 25 日 02:05:30 |
 
@@ -1385,7 +1385,7 @@
 | 漏洞标题 | ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 17 日 06:15:07 |
 | 上次修改时间 | 2024 年 11 月 01 日 02:35:03 |
 
@@ -1406,7 +1406,7 @@
 | 漏洞标题 | ncurses: segmentation fault via _nc_wrap_entry() |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 12 日 23:15:07 |
 | 上次修改时间 | 2024 年 01 月 31 日 11:15:08 |
 
@@ -1427,7 +1427,7 @@
 | 漏洞标题 | ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 02 月 17 日 06:15:07 |
 | 上次修改时间 | 2024 年 11 月 01 日 02:35:03 |
 
@@ -1448,7 +1448,7 @@
 | 漏洞标题 | ncurses: segmentation fault via _nc_wrap_entry() |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 12 月 12 日 23:15:07 |
 | 上次修改时间 | 2024 年 01 月 31 日 11:15:08 |
 
@@ -1469,7 +1469,7 @@
 | 漏洞标题 | openssl: remote attackers (from the client side) to trigger unnecessarily expensive server-side DHE modular-exponentiation calculations |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2024 年 08 月 26 日 14:15:04 |
 | 上次修改时间 | 2024 年 08 月 27 日 00:35:11 |
 
@@ -1490,7 +1490,7 @@
 | 漏洞标题 | shadow: Improper input validation in shadow-utils package utility chfn |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2023 年 04 月 15 日 06:15:07 |
 | 上次修改时间 | 2023 年 04 月 25 日 02:05:30 |
 
@@ -1511,7 +1511,7 @@
 | 漏洞标题 | wget: authorization header disclosure on redirect |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ubuntu |
-| 状态 | affected |
+| 状态 | 该软件包在此平台上受该漏洞的影响，但是暂未发布补丁 |
 | 披露时间 | 2021 年 04 月 29 日 13:15:08 |
 | 上次修改时间 | 2022 年 05 月 14 日 04:52:24 |
 

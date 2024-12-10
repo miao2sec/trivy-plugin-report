@@ -143,7 +143,7 @@ func AddScanResult(report *types.Report, md *utils.Markdown, brief bool) *utils.
 			addRow(&vulnInfo, "威胁等级", utils.ChineseSeverity[vulnerability.Severity])
 			addRow(&vulnInfo, "威胁等级来源", string(vulnerability.SeveritySource))
 			addRow(&vulnInfo, "供应商的漏洞编号", strings.Join(vulnerability.VendorIDs, "<br/>"))
-			addRow(&vulnInfo, "状态", vulnerability.Status.String())
+			addRow(&vulnInfo, "状态", utils.VulnStatuses[vulnerability.Status.String()])
 			addRow(&vulnInfo, "披露时间", utils.FormatTime(vulnerability.PublishedDate, true))
 			addRow(&vulnInfo, "上次修改时间", utils.FormatTime(vulnerability.LastModifiedDate, true))
 			md.SetTable([]string{"漏洞编号", vulnerability.VulnerabilityID}, vulnInfo)

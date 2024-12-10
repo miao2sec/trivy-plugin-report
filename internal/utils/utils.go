@@ -13,13 +13,24 @@ import (
 	"time"
 )
 
-var ChineseSeverity = map[string]string{
-	"CRITICAL": "超危",
-	"HIGH":     "高危",
-	"MEDIUM":   "中危",
-	"LOW":      "低危",
-	"UNKNOWN":  "未知",
-}
+var (
+	VulnStatuses = map[string]string{
+		"not_affected":        "该软件包在此平台上不受该漏洞的影响",
+		"affected":            "该软件包在此平台上受该漏洞的影响，但是暂未发布补丁",
+		"fixed":               "该软件包已发布修复补丁",
+		"under_investigation": "目前暂未知晓该软件包在此平台上是否受该漏洞的影响，并且正在调查中",
+		"will_not_fix":        "该软件包在此平台上受该漏洞的影响，但是目前没有修复它的打算（这主要是针对影响较低或中等、对客户不构成重大风险的漏洞）。",
+		"fix_deferred":        "该软件包在此平台上受该漏洞的影响, 并且在未来可能会修复",
+		"end_of_life":         "该软件包已被识别包含受影响的组件，但未进行确定其是否受此漏洞影响的分析。",
+	}
+	ChineseSeverity = map[string]string{
+		"CRITICAL": "超危",
+		"HIGH":     "高危",
+		"MEDIUM":   "中危",
+		"LOW":      "低危",
+		"UNKNOWN":  "未知",
+	}
+)
 
 // FormatTime 若时间为空，则正常退出并返回空字符串
 func FormatTime(t *time.Time, Chinese bool) string {

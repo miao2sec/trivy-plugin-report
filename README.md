@@ -2,7 +2,7 @@
 
 [English](./README_en.md)
 
-📊 `trivy-plugin-report` 是一个可以将 Trivy 输出的 JSON 格式的报告转换为 EXCEL 和 Markdown 的插件。
+📊 `trivy-plugin-report` 是一个可以将 [Trivy](https://github.com/aquasecurity/trivy) 输出的 JSON 格式的报告转换为 EXCEL 和 Markdown 的插件。
 
 ## 🤔 为什么需要它？
 
@@ -60,7 +60,7 @@ trivy image -f json <image_name> | trivy report [plugin_flags]
     ```
    ![img.png](img/markdown.png)
    详情请看 [kube-hunter.md](./internal/markdown/testdata/kube-hunter.md)
-4. 使用 `--brief` 将 Markdown 简化。即，去除描述和相关链接。 
+4. 使用 `--brief` 将 Markdown 简化。即，去除漏洞描述和相关链接。 
     ```bash
    trivy image -f json tomcat:9.0.97-jre8-temurin-jammy | trivy report --markdown-file output.md --brief
     ```

@@ -67,101 +67,101 @@
 
 | 可修复漏洞 | 漏洞数量 |
 |--- | --- |
-| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
-| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
-| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
+| CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
 | CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
-| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
 | CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
-| CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
+| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
+| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
 | CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
-| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
-| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
-| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
-| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
-| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
+| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
+| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
+| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
 | CVE-2021-30139 | 1 |
+| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
+| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
+| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
+| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
+| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
+| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
 | CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
+| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
+| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
+| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
 | CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
 | CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
-| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
-| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
-| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
-| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
-| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
-| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
 | CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
 
 包含漏洞的软件包如下所示。
 
 | 软件包名称 | 包含的漏洞数量 |
 |--- | --- |
-| libssl1.1 | 8 |
 | libcrypto1.1 | 8 |
+| libssl1.1 | 8 |
 | urllib3 | 4 |
 | sqlite-libs | 3 |
-| requests | 2 |
 | apk-tools | 2 |
 | certifi | 2 |
-| setuptools | 2 |
 | pip | 2 |
-| musl | 1 |
-| krb5-libs | 1 |
-| libcom_err | 1 |
-| wheel | 1 |
-| musl-utils | 1 |
-| future | 1 |
-| busybox | 1 |
+| requests | 2 |
+| setuptools | 2 |
 | ssl_client | 1 |
-| tcpdump | 1 |
+| krb5-libs | 1 |
+| future | 1 |
 | idna | 1 |
+| libcom_err | 1 |
+| musl | 1 |
+| musl-utils | 1 |
+| tcpdump | 1 |
+| wheel | 1 |
+| busybox | 1 |
 
 全量漏洞如下所示，漏洞详情请看第二部分的扫描结果。
 
 | 漏洞名称 | 漏洞数量 |
 |--- | --- |
-| CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
 | CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
-| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
-| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
 | CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
+| CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
+| CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
+| CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
+| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
 | CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
-| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
+| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
+| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
+| CVE-2021-30139 | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
+| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
+| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
+| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
 | CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
+| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
 | CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
 | CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
-| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
-| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
-| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
 | CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
-| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
-| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
-| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
 | CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
-| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
-| CVE-2021-30139 | 1 |
-| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
+| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
 | CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
 
 # 2. 扫描结果
 
@@ -190,7 +190,7 @@
 | 漏洞标题 | libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash |
 | 威胁等级 | 超危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 08 月 03 日 22:15:08 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:36:43 |
 
@@ -229,7 +229,7 @@ libfetch before 2021-07-26, as used in apk-tools, xbps, and other products, mish
 |--- | --- |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 04 月 22 日 00:15:08 |
 | 上次修改时间 | 2021 年 04 月 23 日 02:21:47 |
 
@@ -262,7 +262,7 @@ In Alpine Linux apk-tools before 2.12.5, the tarball parser allows a buffer over
 | 漏洞标题 | busybox: invalid free or segmentation fault via malformed gzip data |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 19 日 13:15:13 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:32:23 |
 
@@ -305,7 +305,7 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 | 漏洞标题 | krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 11 月 06 日 16:15:13 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:21:07 |
 
@@ -356,7 +356,7 @@ MIT Kerberos 5 (aka krb5) before 1.17.2 and 1.18.x before 1.18.3 allows unbounde
 | 漏洞标题 | e2fsprogs: Out-of-bounds write in e2fsck/rehash.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 01 月 09 日 00:15:11 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:11:27 |
 
@@ -401,7 +401,7 @@ A code execution vulnerability exists in the directory rehashing functionality o
 | 漏洞标题 | openssl: Segmentation fault in SSL_check_chain causes denial of service |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 04 月 21 日 22:15:11 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:19:39 |
 
@@ -477,7 +477,7 @@ Server or client applications that call the SSL_check_chain() function during or
 | 漏洞标题 | openssl: integer overflow in CipherUpdate |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
@@ -543,7 +543,7 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 | 漏洞标题 | openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 25 日 23:15:13 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:38:00 |
 
@@ -608,7 +608,7 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 | 漏洞标题 | openssl: Integer overflow in RSAZ modular exponentiation on x86_64 |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2019 年 12 月 07 日 02:15:12 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:08:28 |
 
@@ -671,7 +671,7 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 | 漏洞标题 | openssl: EDIPARTYNAME NULL pointer de-reference |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 12 月 09 日 00:15:11 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
@@ -735,7 +735,7 @@ The X.509 GeneralName type is a generic type for representing different types of
 | 漏洞标题 | openssl: NULL pointer dereference in X509_issuer_and_serial_hash() |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
@@ -804,7 +804,7 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 | 漏洞标题 | openssl: NULL pointer dereference in signature_algorithms processing |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 25 日 23:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:19 |
 
@@ -879,7 +879,7 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 | 漏洞标题 | openssl: incorrect SSLv2 rollback protection |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
@@ -923,7 +923,7 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 | 漏洞标题 | openssl: Segmentation fault in SSL_check_chain causes denial of service |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 04 月 21 日 22:15:11 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:19:39 |
 
@@ -999,7 +999,7 @@ Server or client applications that call the SSL_check_chain() function during or
 | 漏洞标题 | openssl: integer overflow in CipherUpdate |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
@@ -1065,7 +1065,7 @@ Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow 
 | 漏洞标题 | openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 25 日 23:15:13 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:38:00 |
 
@@ -1130,7 +1130,7 @@ The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certi
 | 漏洞标题 | openssl: Integer overflow in RSAZ modular exponentiation on x86_64 |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2019 年 12 月 07 日 02:15:12 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:08:28 |
 
@@ -1193,7 +1193,7 @@ There is an overflow bug in the x64_64 Montgomery squaring procedure used in exp
 | 漏洞标题 | openssl: EDIPARTYNAME NULL pointer de-reference |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 12 月 09 日 00:15:11 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
@@ -1257,7 +1257,7 @@ The X.509 GeneralName type is a generic type for representing different types of
 | 漏洞标题 | openssl: NULL pointer dereference in X509_issuer_and_serial_hash() |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:17 |
 
@@ -1326,7 +1326,7 @@ The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create
 | 漏洞标题 | openssl: NULL pointer dereference in signature_algorithms processing |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 25 日 23:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:19 |
 
@@ -1401,7 +1401,7 @@ An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation Clie
 | 漏洞标题 | openssl: incorrect SSLv2 rollback protection |
 | 威胁等级 | 低危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 02 月 17 日 01:15:13 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:16 |
 
@@ -1445,7 +1445,7 @@ OpenSSL 1.0.2 supports SSLv2. If a client attempts to negotiate SSLv2 with a ser
 | 漏洞标题 | In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 11 月 25 日 02:15:12 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:21:24 |
 
@@ -1489,7 +1489,7 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 | 漏洞标题 | In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 11 月 25 日 02:15:12 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:21:24 |
 
@@ -1533,7 +1533,7 @@ In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of des
 | 漏洞标题 | sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2019 年 11 月 26 日 04:15:11 |
 | 上次修改时间 | 2022 年 04 月 16 日 00:12:54 |
 
@@ -1572,7 +1572,7 @@ sqlite3Select in select.c in SQLite 3.30.1 allows a crash if a sub-select uses b
 | 漏洞标题 | sqlite: malformed window-function query leads to DoS |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 04 月 09 日 11:15:11 |
 | 上次修改时间 | 2022 年 04 月 08 日 18:34:22 |
 
@@ -1621,7 +1621,7 @@ SQLite through 3.31.1 allows attackers to cause a denial of service (segmentatio
 | 漏洞标题 | sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2019 年 11 月 28 日 01:15:14 |
 | 上次修改时间 | 2022 年 04 月 19 日 23:36:45 |
 
@@ -1660,7 +1660,7 @@ SQLite 3.30.1 mishandles pExpr->y.pTab, as demonstrated by the TK_COLUMN case in
 | 漏洞标题 | busybox: invalid free or segmentation fault via malformed gzip data |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 03 月 19 日 13:15:13 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:32:23 |
 
@@ -1703,7 +1703,7 @@ decompress_gunzip.c in BusyBox through 1.32.1 mishandles the error bit on the hu
 | 漏洞标题 | tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | nvd |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 11 月 05 日 02:15:20 |
 | 上次修改时间 | 2023 年 11 月 07 日 11:26:15 |
 
@@ -1755,7 +1755,7 @@ The ppp decapsulator in tcpdump 4.9.3 can be convinced to allocate a large amoun
 | 漏洞标题 | python-certifi: Removal of e-Tugra root certificate |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2023 年 07 月 26 日 05:15:10 |
 | 上次修改时间 | 2023 年 08 月 12 日 14:16:31 |
 
@@ -1801,7 +1801,7 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 | 漏洞标题 | python-certifi: untrusted root certificates |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2022 年 12 月 08 日 06:15:09 |
 | 上次修改时间 | 2023 年 03 月 25 日 02:12:24 |
 
@@ -1841,7 +1841,7 @@ Certifi is a curated collection of Root Certificates for validating the trustwor
 | 漏洞标题 | python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2022 年 12 月 23 日 08:15:14 |
 | 上次修改时间 | 2023 年 01 月 24 日 02:57:18 |
 
@@ -1885,7 +1885,7 @@ An issue discovered in Python Charmers Future 0.18.2 and earlier allows remote a
 | 漏洞标题 | python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 07 月 08 日 02:15:09 |
 | 上次修改时间 | 2024 年 07 月 11 日 22:58:01 |
 
@@ -1932,7 +1932,7 @@ A vulnerability was identified in the kjd/idna library, specifically within the 
 | 漏洞标题 | python-pip: Incorrect handling of unicode separators in git references |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2021 年 11 月 11 日 02:15:09 |
 | 上次修改时间 | 2024 年 06 月 22 日 03:15:20 |
 
@@ -1983,7 +1983,7 @@ A flaw was found in python-pip in the way it handled Unicode separators in git r
 | 漏洞标题 | pip: Mercurial configuration injectable in repo revision when installing via pip |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2023 年 10 月 26 日 02:17:44 |
 | 上次修改时间 | 2024 年 06 月 11 日 02:15:24 |
 
@@ -2044,7 +2044,7 @@ affect users who aren't installing from Mercurial.
 | 漏洞标题 | python-requests: Unintended leak of Proxy-Authorization header |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2023 年 05 月 27 日 02:15:14 |
 | 上次修改时间 | 2023 年 09 月 17 日 17:15:12 |
 
@@ -2102,7 +2102,7 @@ Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Prox
 | 漏洞标题 | requests: subsequent requests to the same host ignore cert verification |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 05 月 21 日 05:15:09 |
 | 上次修改时间 | 2024 年 06 月 11 日 01:16:29 |
 
@@ -2143,7 +2143,7 @@ Requests is a HTTP library. Prior to 2.32.0, when making requests through a Requ
 | 漏洞标题 | pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2022 年 12 月 23 日 08:15:13 |
 | 上次修改时间 | 2024 年 10 月 29 日 23:35:09 |
 
@@ -2206,7 +2206,7 @@ Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attacke
 | 漏洞标题 | pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 07 月 15 日 09:15:01 |
 | 上次修改时间 | 2024 年 07 月 15 日 21:00:34 |
 
@@ -2252,7 +2252,7 @@ A vulnerability in the package_index module of pypa/setuptools versions up to 69
 | 漏洞标题 | python-urllib3: CRLF injection via HTTP request method |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2020 年 10 月 01 日 02:15:26 |
 | 上次修改时间 | 2023 年 10 月 08 日 22:15:11 |
 
@@ -2302,7 +2302,7 @@ urllib3 before 1.25.9 allows CRLF injection if the attacker controls the HTTP re
 | 漏洞标题 | python-urllib3: Cookie request header isn't stripped during cross-origin redirects |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2023 年 10 月 05 日 01:15:10 |
 | 上次修改时间 | 2024 年 02 月 01 日 08:55:23 |
 
@@ -2357,7 +2357,7 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat
 | 漏洞标题 | urllib3: Request body not stripped after redirect from 303 status changes request method to GET |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2023 年 10 月 18 日 04:15:10 |
 | 上次修改时间 | 2023 年 11 月 04 日 06:15:11 |
 
@@ -2423,7 +2423,7 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 | 漏洞标题 | urllib3: proxy-authorization request header is not stripped during cross-origin redirects |
 | 威胁等级 | 中危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2024 年 06 月 18 日 04:15:13 |
 | 上次修改时间 | 2024 年 06 月 20 日 20:44:22 |
 
@@ -2470,7 +2470,7 @@ urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wo
 | 漏洞标题 | python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli |
 | 威胁等级 | 高危 |
 | 威胁等级来源 | ghsa |
-| 状态 | fixed |
+| 状态 | 该软件包已发布修复补丁 |
 | 披露时间 | 2022 年 12 月 23 日 08:15:14 |
 | 上次修改时间 | 2022 年 12 月 31 日 06:15:22 |
 
