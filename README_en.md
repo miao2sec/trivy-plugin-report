@@ -60,7 +60,7 @@ the severity of the vulnerabilities.
  ```bash
 trivy image -f json sonobuoy/kube-hunter:v0.2.0 | trivy report --markdown-file output.md
  ```
-For details, see [kube-hunter.md](./internal/markdown/testdata/kube-hunter.md)
+For details, see [kube-hunter.md](markdown/testdata/kube-hunter.md)
 
 
 ## TODO

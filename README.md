@@ -46,25 +46,25 @@ trivy image -f json <image_name> | trivy report [plugin_flags]
     ```
     ![img.png](img/shell-img.png)
     ![img.png](img/default-excel.png)
-    详情请看 [vpt_java_test.xlsx](./internal/excel/testdata/vpt_java_test.xlsx)
+    详情请看 [vpt_java_test.xlsx](excel/testdata/vpt_java_test.xlsx)
 
 2. 使用 `--beautify` 将 EXCEL 表格美化。即，根据漏洞的威胁等级填充背景色。
    ```bash
    trivy image -f json debian:12 | trivy report --excel-file output-beautify.xlsx --beautify
    ```
    ![img.png](img/beautify-excel.png)
-   详情请看 [vpt_java_test_beautify.xlsx](./internal/excel/testdata/vpt_java_test_beautify.xlsx)
+   详情请看 [vpt_java_test_beautify.xlsx](excel/testdata/vpt_java_test_beautify.xlsx)
 3. 生成 Markdown 文档，并命名为 `output.md`
     ```bash
    trivy image -f json sonobuoy/kube-hunter:v0.2.0 | trivy report --markdown-file output.md
     ```
    ![img.png](img/markdown.png)
-   详情请看 [kube-hunter.md](./internal/markdown/testdata/kube-hunter.md)
+   详情请看 [kube-hunter.md](markdown/testdata/kube-hunter.md)
 4. 使用 `--brief` 将 Markdown 简化。即，去除漏洞描述和相关链接。 
     ```bash
    trivy image -f json tomcat:9.0.97-jre8-temurin-jammy | trivy report --markdown-file output.md --brief
     ```
-   详情请看 [tomcat.md](./internal/markdown/testdata/tomcat.md)
+   详情请看 [tomcat.md](markdown/testdata/tomcat.md)
 ## TODO
 - [x] 📝 导出 markdown 文档
 - [ ] 📝 导出 PDF 文档
