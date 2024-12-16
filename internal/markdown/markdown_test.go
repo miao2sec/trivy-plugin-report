@@ -2,7 +2,7 @@ package markdown
 
 import (
 	"github.com/aquasecurity/trivy/pkg/types"
-	"github.com/miao2sec/trivy-plugin-report/internal/utils"
+	"github.com/miao2sec/trivy-plugin-report/utils"
 	"strings"
 	"testing"
 )

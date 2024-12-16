@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/aquasecurity/trivy/pkg/types"
 	v1 "github.com/google/go-containerregistry/pkg/v1"
-	"github.com/miao2sec/trivy-plugin-report/internal/utils"
+	"github.com/miao2sec/trivy-plugin-report/utils"
 	"os"
 	"strconv"
 	"strings"

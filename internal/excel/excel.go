@@ -6,7 +6,7 @@ import (
 	ftypes "github.com/aquasecurity/trivy/pkg/fanal/types"
 	"github.com/aquasecurity/trivy/pkg/log"
 	"github.com/aquasecurity/trivy/pkg/types"
-	"github.com/miao2sec/trivy-plugin-report/internal/utils"
+	"github.com/miao2sec/trivy-plugin-report/utils"
 	"github.com/xuri/excelize/v2"
 	"golang.org/x/xerrors"
 )
