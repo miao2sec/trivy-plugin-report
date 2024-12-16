@@ -67,101 +67,101 @@
 
 | 可修复漏洞 | 漏洞数量 |
 |--- | --- |
-| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
-| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
-| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
 | CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
 | CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
-| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
-| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
+| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
 | CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
-| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
+| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
+| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
+| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
+| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
 | CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
-| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
-| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
-| CVE-2021-30139 | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
-| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
-| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
 | CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
+| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
+| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
+| CVE-2021-30139 | 1 |
+| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
+| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
+| CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
+| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
+| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
 | CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
 | CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
 | CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
-| CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
+| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
+| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
 | CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
-| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
+| CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
 | CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
 
 包含漏洞的软件包如下所示。
 
 | 软件包名称 | 包含的漏洞数量 |
 |--- | --- |
-| libssl1.1 | 8 |
 | libcrypto1.1 | 8 |
+| libssl1.1 | 8 |
 | urllib3 | 4 |
 | sqlite-libs | 3 |
 | apk-tools | 2 |
-| pip | 2 |
-| setuptools | 2 |
-| requests | 2 |
 | certifi | 2 |
-| busybox | 1 |
-| future | 1 |
-| musl-utils | 1 |
-| tcpdump | 1 |
-| idna | 1 |
-| libcom_err | 1 |
-| ssl_client | 1 |
-| wheel | 1 |
-| musl | 1 |
+| setuptools | 2 |
+| pip | 2 |
+| requests | 2 |
 | krb5-libs | 1 |
+| future | 1 |
+| wheel | 1 |
+| ssl_client | 1 |
+| musl | 1 |
+| libcom_err | 1 |
+| idna | 1 |
+| tcpdump | 1 |
+| musl-utils | 1 |
+| busybox | 1 |
 
 全量漏洞如下所示，漏洞详情请看第二部分的扫描结果。
 
 | 漏洞名称 | 漏洞数量 |
 |--- | --- |
-| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
-| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
-| CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
-| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
 | CVE-2021-28831 : busybox: invalid free or segmentation fault via malformed gzip data | 2 |
-| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
 | CVE-2021-23839 : openssl: incorrect SSLv2 rollback protection | 2 |
-| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
-| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2020-28928 : In musl libc through 1.2.1, wcsnrtombs mishandles particular combinati ... | 2 |
 | CVE-2019-1551 : openssl: Integer overflow in RSAZ modular exponentiation on x86_64 | 2 |
-| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
-| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
-| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
-| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
-| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
-| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
-| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
-| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
-| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
-| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
-| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
-| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
-| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
-| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
-| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
-| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
-| CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
-| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
+| CVE-2021-3450 : openssl: CA certificate check bypass with X509_V_FLAG_X509_STRICT | 2 |
+| CVE-2020-1971 : openssl: EDIPARTYNAME NULL pointer de-reference | 2 |
+| CVE-2020-1967 : openssl: Segmentation fault in SSL_check_chain causes denial of service | 2 |
+| CVE-2021-23841 : openssl: NULL pointer dereference in X509_issuer_and_serial_hash() | 2 |
+| CVE-2021-23840 : openssl: integer overflow in CipherUpdate | 2 |
+| CVE-2021-3449 : openssl: NULL pointer dereference in signature_algorithms processing | 2 |
 | CVE-2021-30139 | 1 |
+| CVE-2024-35195 : requests: subsequent requests to the same host ignore cert verification | 1 |
+| CVE-2024-6345 : pypa/setuptools: Remote code execution via download functions in the package_index module in pypa/setuptools | 1 |
+| CVE-2022-40898 : python-wheel: remote attackers can cause denial of service via attacker controlled input to wheel cli | 1 |
 | CVE-2021-3572 : python-pip: Incorrect handling of unicode separators in git references | 1 |
-| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2023-43804 : python-urllib3: Cookie request header isn't stripped during cross-origin redirects | 1 |
+| CVE-2022-23491 : python-certifi: untrusted root certificates | 1 |
 | CVE-2023-37920 : python-certifi: Removal of e-Tugra root certificate | 1 |
+| CVE-2020-8037 : tcpdump: ppp decapsulator can be convinced to allocate a large amount of memory | 1 |
+| CVE-2023-5752 : pip: Mercurial configuration injectable in repo revision when installing via pip | 1 |
+| CVE-2023-32681 : python-requests: Unintended leak of Proxy-Authorization header | 1 |
+| CVE-2024-37891 : urllib3: proxy-authorization request header is not stripped during cross-origin redirects | 1 |
+| CVE-2022-40897 : pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py | 1 |
+| CVE-2020-28196 : krb5: unbounded recursion via an ASN.1-encoded Kerberos message in lib/krb5/asn.1/asn1_encode.c may lead to DoS | 1 |
+| CVE-2019-5188 : e2fsprogs: Out-of-bounds write in e2fsck/rehash.c | 1 |
 | CVE-2019-19244 : sqlite: allows a crash if a sub-select uses both DISTINCT and window functions and also has certain ORDER BY usage | 1 |
+| CVE-2019-19242 : sqlite: SQL injection in sqlite3ExprCodeTarget in expr.c | 1 |
+| CVE-2022-40899 : python-future: remote attackers can cause denial of service via crafted Set-Cookie header from malicious web server | 1 |
+| CVE-2023-45803 : urllib3: Request body not stripped after redirect from 303 status changes request method to GET | 1 |
+| CVE-2020-26137 : python-urllib3: CRLF injection via HTTP request method | 1 |
+| CVE-2024-3651 : python-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode() | 1 |
+| CVE-2020-11655 : sqlite: malformed window-function query leads to DoS | 1 |
+| CVE-2021-36159 : libfetch: an out of boundary read while libfetch uses strtol to parse the relevant numbers into address bytes leads to information leak or crash | 1 |
 
 # 2. 扫描结果
 
