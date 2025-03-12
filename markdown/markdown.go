@@ -27,9 +27,14 @@ func Export(report *types.Report, fileName string, brief bool) (err error) {
 func AddArtifactInfo(report *types.Report, md *utils.Markdown) *utils.Markdown {
 	var (
 		artifactType = utils.SetArtifactType(report.ArtifactType)
-		osInfo       = fmt.Sprintf("%s %s", report.Metadata.OS.Family, report.Metadata.OS.Name)
 		scanTime     = utils.FormatTime(&report.CreatedAt, true)
+		osInfo       string
 	)
+	if report.Metadata.OS != nil {
+		osInfo = fmt.Sprintf("%s %s", report.Metadata.OS.Family, report.Metadata.OS.Name)
+	} else {
+		osInfo = "Linux"
+	}
 	md.SetH2("1.1 制品信息")
 	md.SetText(fmt.Sprintf("%s %s 基于 %s 操作系统构建，适用于 %s 架构，并在 %s 的安全扫描中发现了潜在的安全问题。",
 		artifactType, report.ArtifactName, osInfo, report.Metadata.ImageConfig.Architecture, scanTime))

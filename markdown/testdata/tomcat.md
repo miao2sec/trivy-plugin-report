@@ -93,49 +93,49 @@
 | 软件包名称 | 包含的漏洞数量 |
 |--- | --- |
 | libkrb5-3 | 3 |
-| libgssapi-krb5-2 | 3 |
 | libk5crypto3 | 3 |
+| libgssapi-krb5-2 | 3 |
 | libkrb5support0 | 3 |
-| libpam-runtime | 2 |
 | libncurses6 | 2 |
+| libpam-modules-bin | 2 |
 | libgcc-s1 | 2 |
 | libpam-modules | 2 |
-| libncursesw6 | 2 |
 | ncurses-bin | 2 |
-| libstdc++6 | 2 |
-| ncurses-base | 2 |
-| libpam-modules-bin | 2 |
 | libpam0g | 2 |
+| libncursesw6 | 2 |
+| libstdc++6 | 2 |
+| libpam-runtime | 2 |
+| ncurses-base | 2 |
 | libtinfo6 | 2 |
 | gcc-12-base | 2 |
-| gnupg-utils | 1 |
+| libssl3 | 1 |
+| libzstd1 | 1 |
 | libgcrypt20 | 1 |
-| gnupg-l10n | 1 |
-| libpcre2-8-0 | 1 |
+| gpgsm | 1 |
+| gpg-wks-server | 1 |
+| gnupg | 1 |
+| login | 1 |
 | dirmngr | 1 |
 | openssl | 1 |
-| libpcre3 | 1 |
-| libzstd1 | 1 |
-| coreutils | 1 |
-| libsystemd0 | 1 |
-| gpg-wks-server | 1 |
-| curl | 1 |
-| libcurl4 | 1 |
-| gpgconf | 1 |
-| libssl3 | 1 |
-| passwd | 1 |
-| gpg | 1 |
-| libc6 | 1 |
-| gpg-agent | 1 |
 | libudev1 | 1 |
-| login | 1 |
-| gpg-wks-client | 1 |
-| gpgsm | 1 |
-| libc-bin | 1 |
+| gpg | 1 |
 | gpgv | 1 |
-| wget | 1 |
-| gnupg | 1 |
 | locales | 1 |
+| libcurl4 | 1 |
+| coreutils | 1 |
+| libc6 | 1 |
+| libc-bin | 1 |
+| passwd | 1 |
+| wget | 1 |
+| curl | 1 |
+| gnupg-l10n | 1 |
+| gpgconf | 1 |
+| libpcre2-8-0 | 1 |
+| gnupg-utils | 1 |
+| libpcre3 | 1 |
+| libsystemd0 | 1 |
+| gpg-wks-client | 1 |
+| gpg-agent | 1 |
 
 全量漏洞如下所示，漏洞详情请看第二部分的扫描结果。
 
@@ -144,23 +144,23 @@
 | CVE-2022-3219 : gnupg: denial of service issue (resource consumption) using compressed packets | 11 |
 | CVE-2023-45918 : ncurses: NULL pointer dereference in tgetstr in tinfo/lib_termcap.c | 5 |
 | CVE-2023-50495 : ncurses: segmentation fault via _nc_wrap_entry() | 5 |
+| CVE-2024-26458 : krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c | 4 |
+| CVE-2024-10963 : pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass | 4 |
 | CVE-2024-26462 : krb5: Memory leak at /krb5/src/kdc/ndr.c | 4 |
 | CVE-2024-10041 : pam: libpam: Libpam vulnerable to read hashed password | 4 |
-| CVE-2024-10963 : pam: Improper Hostname Interpretation in pam_access Leads to Access Control Bypass | 4 |
 | CVE-2024-26461 : krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c | 4 |
-| CVE-2024-26458 : krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c | 4 |
+| CVE-2016-20013 | 3 |
 | CVE-2023-4039 : gcc: -fstack-protector fails to guard dynamic stack allocations on ARM64 | 3 |
 | CVE-2022-27943 : binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const | 3 |
-| CVE-2016-20013 | 3 |
 | CVE-2023-29383 : shadow: Improper input validation in shadow-utils package utility chfn | 2 |
 | CVE-2024-9681 : curl: HSTS subdomain overwrites parent cache entry | 2 |
-| CVE-2024-41996 : openssl: remote attackers (from the client side) to trigger unnecessarily expensive server-side DHE modular-exponentiation calculations | 2 |
 | CVE-2023-7008 : systemd-resolved: Unsigned name response in signed zone is not refused when DNSSEC=yes | 2 |
+| CVE-2024-41996 : openssl: remote attackers (from the client side) to trigger unnecessarily expensive server-side DHE modular-exponentiation calculations | 2 |
 | CVE-2016-2781 : coreutils: Non-privileged session can escape to the parent session in chroot | 1 |
-| CVE-2021-31879 : wget: authorization header disclosure on redirect | 1 |
-| CVE-2017-11164 : pcre: OP_KETRMAX feature in the match function in pcre_exec.c | 1 |
-| CVE-2022-41409 : pcre2: negative repeat value in a pcre2test subject line leads to inifinite loop | 1 |
 | CVE-2024-2236 : libgcrypt: vulnerable to Marvin Attack | 1 |
+| CVE-2021-31879 : wget: authorization header disclosure on redirect | 1 |
+| CVE-2022-41409 : pcre2: negative repeat value in a pcre2test subject line leads to inifinite loop | 1 |
+| CVE-2017-11164 : pcre: OP_KETRMAX feature in the match function in pcre_exec.c | 1 |
 | CVE-2022-4899 : zstd: mysql: buffer overrun in util.c | 1 |
 
 # 2. 扫描结果

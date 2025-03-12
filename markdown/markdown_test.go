@@ -42,6 +42,15 @@ func TestExport(t *testing.T) {
 			},
 			wantErr: false,
 		},
+		{
+			name: "no os info",
+			args: args{
+				report:   report,
+				filePath: "testdata/no_os_info.md",
+				brief:    true,
+			},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
