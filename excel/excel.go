@@ -59,6 +59,7 @@ func Export(report *types.Report, fileName string, beautify bool) (err error) {
 	var (
 		f       = excelize.NewFile()
 		hasVuln = false
+		rowNum  = 2 // 记录当前工作表的最后一行
 	)
 
 	for _, result := range report.Results {
@@ -72,16 +73,17 @@ func Export(report *types.Report, fileName string, beautify bool) (err error) {
 			}
 
 			// add vulnerability
-			for i, vuln := range result.Vulnerabilities {
+			for _, vuln := range result.Vulnerabilities {
 				data, err = parseVulnData(result.Target, result.Type, result.Class, vuln)
 				if err != nil {
 					return xerrors.Errorf("failed to parse vuln data:%w", err)
 				}
-				err = f.SetSheetRow(VulnReport, fmt.Sprintf("A%v", i+2), &data)
+				err = f.SetSheetRow(VulnReport, fmt.Sprintf("A%v", rowNum), &data)
 				if err != nil {
 					return xerrors.Errorf("failed to add vuln %s for sheet %s:%w", vuln.VulnerabilityID,
 						VulnReport, err)
 				}
+				rowNum++
 			}
 
 			if err = setVulnSheetStyle(f, beautify); err != nil {
